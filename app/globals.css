@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #600A1D;
+  --color-primary-dark: #3D0210;
+  --color-accent: #D99B26;
+  --color-accent-light: #F5B041;
+  --color-cream: #FAF6F0;
+  --color-cream-dark: #F3EDE2;
+  --color-charcoal: #231F20;
+  --color-whatsapp: #25D366;
+  
+  --font-playfair: var(--font-playfair), serif;
+  --font-outfit: var(--font-outfit), sans-serif;
+  
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+:root {
+  --font-playfair: "Playfair Display", serif;
+  --font-outfit: "Outfit", sans-serif;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-outfit);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D99B26;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #600A1D;
+}
+
+/* Elegant Glassmorphism utility */
+.glass-nav {
+  background: rgba(96, 10, 29, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(217, 155, 38, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(217, 155, 38, 0.15);
+}
+
+.glass-card-dark {
+  background: rgba(61, 2, 16, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(217, 155, 38, 0.25);
+}
+
+/* Indian Festive Mandana/Rangoli Background Pattern (subtle opacity) */
+.festive-bg-pattern {
+  background-image: radial-gradient(rgba(217, 155, 38, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Premium gradient overlays */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F5B041 0%, #D99B26 50%, #9C6C11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #F5B041 0%, #D99B26 100%);
+}
+
+.crimson-gradient-bg {
+  background: linear-gradient(135deg, #600A1D 0%, #3D0210 100%);
+}
