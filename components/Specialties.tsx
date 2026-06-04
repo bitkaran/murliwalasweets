@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MessageSquare, Star, Sparkles } from "lucide-react";
-import { MENU_ITEMS, BUSINESS_INFO } from "@/lib/data";
+import { MENU_ITEMS } from "@/lib/data";
 import Card from "./ui/Card";
 import Button from "./ui/Button";
 
@@ -26,7 +26,7 @@ export const Specialties: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-accent font-bold tracking-widest text-sm uppercase block font-outfit">
-            Owner's Recommendation
+            Owner&apos;s Recommendation
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary font-playfair leading-tight">
             Our Legendary Signature Sweets
@@ -39,7 +39,7 @@ export const Specialties: React.FC = () => {
 
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {specialties.map((item, index) => {
+          {specialties.map((item) => {
             const whatsappText = encodeURIComponent(
               `Hello Murliwala Sweets, I would like to order "${item.name}" (${item.price || "custom qty"}). Please confirm availability.`
             );
@@ -106,22 +106,18 @@ export const Specialties: React.FC = () => {
 
                   {/* Action buttons */}
                   <div className="pt-2">
-                    <a
+                    <Button
+                      variant="gold"
+                      size="sm"
                       href={itemOrderUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-full"
+                      className="w-full text-xs font-semibold py-2.5 border border-accent/20"
+                      icon={<MessageSquare className="w-4 h-4" />}
+                      iconPosition="left"
                     >
-                      <Button
-                        variant="gold"
-                        size="sm"
-                        className="w-full text-xs font-semibold py-2.5 border border-accent/20"
-                        icon={<MessageSquare className="w-4 h-4" />}
-                        iconPosition="left"
-                      >
-                        Order via WhatsApp
-                      </Button>
-                    </a>
+                      Order via WhatsApp
+                    </Button>
                   </div>
                 </div>
               </Card>
@@ -150,15 +146,14 @@ export const Specialties: React.FC = () => {
               </p>
             </div>
           </div>
-          <a href="#bulk-orders" className="shrink-0 w-full md:w-auto">
-            <Button
-              variant="outline"
-              size="sm"
-              className="w-full md:w-auto text-cream border-cream/35 hover:bg-cream/10"
-            >
-              Learn More
-            </Button>
-          </a>
+          <Button
+            variant="outline"
+            size="sm"
+            href="#bulk-orders"
+            className="shrink-0 w-full md:w-auto text-cream border-cream/35 hover:bg-cream/10"
+          >
+            Learn More
+          </Button>
         </motion.div>
 
       </div>

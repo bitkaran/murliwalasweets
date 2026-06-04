@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, Sparkles } from "lucide-react";
-import { MENU_ITEMS, BUSINESS_INFO } from "@/lib/data";
-import Button from "./ui/Button";
+import { MENU_ITEMS } from "@/lib/data";
 
 type CategoryFilter = 'sweets' | 'snacks' | 'namkeen' | 'festive';
 

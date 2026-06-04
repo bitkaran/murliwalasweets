@@ -89,51 +89,42 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4"
         >
-          <a
+          <Button
+            variant="gold"
+            size="lg"
             href={BUSINESS_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto text-primary-dark"
+            icon={<MessageSquare className="w-5 h-5" />}
+            iconPosition="left"
           >
-            <Button
-              variant="gold"
-              size="lg"
-              className="w-full sm:w-auto text-primary-dark"
-              icon={<MessageSquare className="w-5 h-5" />}
-              iconPosition="left"
-            >
-              Order on WhatsApp
-            </Button>
-          </a>
+            Order on WhatsApp
+          </Button>
 
-          <a href={BUSINESS_INFO.phoneCallUrl} className="w-full sm:w-auto">
-            <Button
-              variant="primary"
-              size="lg"
-              className="w-full sm:w-auto border border-cream/35 hover:bg-cream/10"
-              icon={<Phone className="w-5 h-5 text-accent-light" />}
-              iconPosition="left"
-            >
-              Call Now
-            </Button>
-          </a>
+          <Button
+            variant="primary"
+            size="lg"
+            href={BUSINESS_INFO.phoneCallUrl}
+            className="w-full sm:w-auto border border-cream/35 hover:bg-cream/10"
+            icon={<Phone className="w-5 h-5 text-accent-light" />}
+            iconPosition="left"
+          >
+            Call Now
+          </Button>
 
-          <a
+          <Button
+            variant="glass"
+            size="lg"
             href={BUSINESS_INFO.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto text-cream border-cream/25 hover:bg-white/10"
+            icon={<MapPin className="w-5 h-5 text-accent-light" />}
+            iconPosition="left"
           >
-            <Button
-              variant="glass"
-              size="lg"
-              className="w-full sm:w-auto text-cream border-cream/25 hover:bg-white/10"
-              icon={<MapPin className="w-5 h-5 text-accent-light" />}
-              iconPosition="left"
-            >
-              Get Directions
-            </Button>
-          </a>
+            Get Directions
+          </Button>
         </motion.div>
 
         {/* Local Landmark Clue */}

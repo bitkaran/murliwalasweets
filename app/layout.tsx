@@ -20,8 +20,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://murliwala-sweets.vercel.app"),
   title: "Murliwala Sweets | Traditional Mithai, Fresh Snacks & Festive Gifting in Jhunjhunu",
-  description: "Experience the finest traditional Rajasthani sweets, 100% Desi Ghee Mithai, and hot fresh snacks in Jhunjhunu. Murliwala Sweets offers Rabdi, Kesar Peda, Samosa, Dhokla, and custom corporate/festive orders. Located near Satyam Residency, Fauz Ka Mohalla.",
+  description: "Experience the finest traditional Rajasthani sweets, Desi Ghee Mithai, and hot fresh snacks in Jhunjhunu. Murliwala Sweets offers Rabdi, Kesar Peda, Samosa, Dhokla, and custom corporate/festive orders. Located near Satyam Residency, Fauz Ka Mohalla. (Please confirm details with shop owner).",
   keywords: [
     "Murliwala Sweets",
     "sweets in Jhunjhunu",
@@ -59,7 +60,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "SweetShop",
     "name": "Murliwala Sweets",
-    "image": "https://murliwala-sweets.vercel.app/images/logo.png", // TODO: Replace with official logo URL once verified
+    "image": "https://murliwala-sweets.vercel.app/images/murliwalasweetslogo.jpg",
     "@id": "https://murliwala-sweets.vercel.app/#store",
     "url": "https://murliwala-sweets.vercel.app",
     "telephone": "+919828357226",

@@ -75,16 +75,15 @@ export const Navbar: React.FC = () => {
 
             {/* Call Now Action Button */}
             <div className="hidden sm:flex items-center space-x-3">
-              <a href={BUSINESS_INFO.phoneCallUrl}>
-                <Button
-                  variant={scrolled ? "gold" : "primary"}
-                  size="sm"
-                  icon={<Phone className="w-4 h-4" />}
-                  iconPosition="left"
-                >
-                  {BUSINESS_INFO.phoneDisplay}
-                </Button>
-              </a>
+              <Button
+                variant={scrolled ? "gold" : "primary"}
+                size="sm"
+                href={BUSINESS_INFO.phoneCallUrl}
+                icon={<Phone className="w-4 h-4" />}
+                iconPosition="left"
+              >
+                {BUSINESS_INFO.phoneDisplay}
+              </Button>
             </div>
 
             {/* Mobile Menu Button */}

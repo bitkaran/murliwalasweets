@@ -11,17 +11,17 @@ export const BulkOrders: React.FC = () => {
     {
       icon: <Gift className="w-8 h-8 text-accent-light" />,
       title: "Festive Gift Boxes",
-      desc: "Custom assorted sweet boxes decorated for Diwali, Holi, and special festivals. Packaged beautifully.",
+      desc: "Custom assorted sweet boxes decorated for Diwali, Holi, and special festivals. Packaged beautifully. (Please confirm packaging designs and options with shop owner).",
     },
     {
       icon: <Calendar className="w-8 h-8 text-accent-light" />,
       title: "Weddings & Celebrations",
-      desc: "Premium dessert catering and custom box sets tailored for weddings, ring ceremonies, and birthdays.",
+      desc: "Premium dessert catering and custom box sets tailored for weddings, ring ceremonies, and birthdays. (Please confirm catering capacity with shop owner).",
     },
     {
       icon: <Truck className="w-8 h-8 text-accent-light" />,
       title: "Corporate & Bulk Gifting",
-      desc: "Delight your employees and business partners with fresh premium sweets customized with your branding.",
+      desc: "Delight your employees and business partners with fresh sweets customized with your branding. (Please confirm logo printing options with shop owner).",
     },
   ];
 
@@ -49,7 +49,7 @@ export const BulkOrders: React.FC = () => {
           </h2>
           <div className="w-20 h-1 bg-accent rounded-full mx-auto" />
           <p className="text-cream/80 font-outfit text-sm sm:text-base leading-relaxed">
-            Planning a celebration? We provide customized sweet packaging, corporate gift hampers, and large catering menus. Let us add sweetness to your milestones.
+            Planning a celebration? We offer custom sweet boxes, festive gift hampers, and large catering menus. (Please confirm order lead times and availability with the shop owner).
           </p>
         </div>
 
@@ -96,41 +96,36 @@ export const BulkOrders: React.FC = () => {
           <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-bl-full pointer-events-none" />
 
           <h3 className="text-2xl md:text-3xl font-black font-playfair text-white">
-            Let's Customize Your Order
+            Let&apos;s Customize Your Order
           </h3>
           <p className="max-w-xl mx-auto text-sm md:text-base text-cream/80 font-outfit">
-            Share your budget, choice of sweets, box styles, and event date. We will curate a proposal within hours.
+            Share your budget, choice of sweets, box styles, and event date. We will curate a proposal. (Prices and details to be confirmed by the owner).
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-            <a
+            <Button
+              variant="gold"
+              size="md"
               href="https://wa.me/919828357226?text=Hello%20Murliwala%20Sweets%2C%20I%20am%20interested%20in%20custom%20bulk%2Ffestive%20packaging%20for%20an%20event.%20Please%20guide%20me."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto text-primary-dark"
+              icon={<MessageSquare className="w-5 h-5" />}
+              iconPosition="left"
             >
-              <Button
-                variant="gold"
-                size="md"
-                className="w-full sm:w-auto text-primary-dark"
-                icon={<MessageSquare className="w-5 h-5" />}
-                iconPosition="left"
-              >
-                Discuss on WhatsApp
-              </Button>
-            </a>
+              Discuss on WhatsApp
+            </Button>
 
-            <a href={BUSINESS_INFO.phoneCallUrl} className="w-full sm:w-auto">
-              <Button
-                variant="outline"
-                size="md"
-                className="w-full sm:w-auto text-cream border-cream/35 hover:bg-cream/10"
-                icon={<Phone className="w-5 h-5 text-accent-light" />}
-                iconPosition="left"
-              >
-                Call for Catering
-              </Button>
-            </a>
+            <Button
+              variant="outline"
+              size="md"
+              href={BUSINESS_INFO.phoneCallUrl}
+              className="w-full sm:w-auto text-cream border-cream/35 hover:bg-cream/10"
+              icon={<Phone className="w-5 h-5 text-accent-light" />}
+              iconPosition="left"
+            >
+              Call for Catering
+            </Button>
           </div>
         </motion.div>
 

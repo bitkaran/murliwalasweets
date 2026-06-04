@@ -1,14 +1,20 @@
 "use client";
 
 import React from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 
-interface ButtonProps extends Omit<HTMLMotionProps<"button">, "children"> {
+interface ButtonProps {
   variant?: "primary" | "secondary" | "gold" | "glass" | "outline";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
+  href?: string;
+  target?: string;
+  rel?: string;
+  className?: string;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  disabled?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -18,8 +24,11 @@ export const Button: React.FC<ButtonProps> = ({
   icon,
   iconPosition = "right",
   className = "",
+  href,
+  target,
+  rel,
   onClick,
-  ...props
+  disabled,
 }) => {
   const baseStyles = "inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-md";
   
@@ -37,17 +46,42 @@ export const Button: React.FC<ButtonProps> = ({
     lg: "px-8 py-4 text-base md:text-lg",
   };
 
+  const content = (
+    <>
+      {icon && iconPosition === "left" && <span className="mr-2 shrink-0">{icon}</span>}
+      <span>{children}</span>
+      {icon && iconPosition === "right" && <span className="ml-2 shrink-0">{icon}</span>}
+    </>
+  );
+
+  const combinedClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+
+  if (href) {
+    return (
+      <motion.a
+        href={href}
+        target={target}
+        rel={rel}
+        whileHover={{ scale: 1.03, y: -2 }}
+        whileTap={{ scale: 0.98 }}
+        onClick={onClick as unknown as React.MouseEventHandler<HTMLAnchorElement>}
+        className={combinedClassName}
+      >
+        {content}
+      </motion.a>
+    );
+  }
+
   return (
     <motion.button
+      type="button"
+      disabled={disabled}
       whileHover={{ scale: 1.03, y: -2 }}
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
-      {...props}
+      className={combinedClassName}
     >
-      {icon && iconPosition === "left" && <span className="mr-2">{icon}</span>}
-      <span>{children}</span>
-      {icon && iconPosition === "right" && <span className="ml-2">{icon}</span>}
+      {content}
     </motion.button>
   );
 };

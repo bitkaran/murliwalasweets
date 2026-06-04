@@ -115,7 +115,7 @@ export const Gallery: React.FC = () => {
 
         {/* Supplementary Image Info (PHASE 4 Instruction implementation) */}
         <div className="mt-8 text-center text-xs text-charcoal/45 font-outfit">
-          * Images are high quality representations of our actual products. Feel free to visit our counter to view today's fresh catalog!
+          * Images are high quality representations of our actual products. Feel free to visit our counter to view today&apos;s fresh catalog!
         </div>
 
       </div>

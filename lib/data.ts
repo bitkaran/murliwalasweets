@@ -294,6 +294,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   }
 ];
 
+// Sample testimonial content — replace with real Google reviews before final launch
 export const TESTIMONIALS: Review[] = [
   {
     id: "rev-1",
@@ -320,12 +321,12 @@ export const TESTIMONIALS: Review[] = [
 
 export const FAQS = [
   {
-    question: "Do you use pure Desi Ghee for all your sweets?",
-    answer: "Yes, our specialty items, pedas, malpuas, and premium cookies are made with 100% pure premium Desi Ghee. Purity and hygiene are our main promises."
+    question: "Do you use Desi Ghee for your sweets?",
+    answer: "Many of our specialty items, including Kesar Peda, Malpua, and cookies, are prepared using Desi Ghee. (Please confirm ingredients and Desi Ghee preparations with the shop owner before ordering)."
   },
   {
     question: "Can I place bulk orders for weddings and events?",
-    answer: "Absolutely! We specialize in bulk custom packages for weddings, corporate gifting, kitty parties, and festivals. You can reach out directly via WhatsApp or Phone call to discuss your menu."
+    answer: "Yes, we handle bulk orders for weddings, corporate gifting, and festivals. You can reach out directly via WhatsApp or Phone call to discuss your menu. (Please confirm capacity and delivery schedule with shop owner)."
   },
   {
     question: "Where is the shop exactly located?",
@@ -333,6 +334,6 @@ export const FAQS = [
   },
   {
     question: "Do you offer home delivery in Jhunjhunu?",
-    answer: "We provide home delivery for larger orders and catering events within Jhunjhunu city. For individual orders, you can call us to pre-pack your sweets for quick pickup."
+    answer: "We can arrange delivery for larger bulk orders and events within Jhunjhunu. For standard orders, please call to check delivery availability or pre-arrange a counter pickup. (Confirm delivery policy with shop owner)."
   }
 ];

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const Footer: React.FC = () => {

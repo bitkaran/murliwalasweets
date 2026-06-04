@@ -11,12 +11,12 @@ export const WhyChooseUs: React.FC = () => {
     {
       icon: <ShieldCheck className="w-8 h-8 text-accent" />,
       title: "Guaranteed Purity",
-      desc: "Our sweets are prepared using 100% pure premium Desi Ghee and fresh dairy, zero adultration.",
+      desc: "Our sweets are prepared using pure premium Desi Ghee and fresh dairy. (Please confirm exact ghee content with shop owner).",
     },
     {
       icon: <Clock className="w-8 h-8 text-accent" />,
       title: "Fresh Daily",
-      desc: "We do not store sweets overnight. Everything is made in controlled quantities fresh every morning.",
+      desc: "Everything is made fresh in controlled quantities. (Please confirm daily stock cycle with shop owner).",
     },
     {
       icon: <Sparkles className="w-8 h-8 text-accent" />,
@@ -26,7 +26,7 @@ export const WhyChooseUs: React.FC = () => {
     {
       icon: <Heart className="w-8 h-8 text-accent" />,
       title: "Hygienic Standards",
-      desc: "Double-checked sanitation levels in our kitchen, storage, and customer counters.",
+      desc: "Sanitation levels are prioritized in our kitchen, storage, and customer counters. (Please confirm kitchen hygiene protocols with shop owner).",
     },
   ];
 
@@ -46,7 +46,7 @@ export const WhyChooseUs: React.FC = () => {
               </h2>
               <div className="w-20 h-1 bg-accent rounded-full mt-2" />
               <p className="text-charcoal/70 font-outfit text-sm sm:text-base leading-relaxed pt-2">
-                For years, we have been more than just a shop. We are a part of Jhunjhunu's family gatherings, afternoon tea times, and festive celebrations. Here is how we maintain that bond.
+                For years, we have been more than just a shop. We are a part of Jhunjhunu&apos;s family gatherings, afternoon tea times, and festive celebrations. Here is how we maintain that bond.
               </p>
             </div>
 
@@ -83,10 +83,10 @@ export const WhyChooseUs: React.FC = () => {
                   ))}
                 </span>
                 <span className="text-xs font-bold text-primary font-outfit">
-                  4.2/5 Average Google Rating
+                  4.2/5 Average Rating
                 </span>
                 <span className="text-[10px] text-charcoal/40 font-outfit">
-                  (Verified reviews)
+                  (Customer trust highlights — please verify with shop owner before final launch)
                 </span>
               </div>
 
@@ -97,13 +97,13 @@ export const WhyChooseUs: React.FC = () => {
 
             {/* Testimonials Stack */}
             <div className="space-y-6">
-              {TESTIMONIALS.map((test, index) => (
+              {TESTIMONIALS.map((test) => (
                 <motion.div
                   key={test.id}
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5 }}
                 >
                   <Card
                     hoverEffect={false}
@@ -121,7 +121,7 @@ export const WhyChooseUs: React.FC = () => {
                     </div>
 
                     <p className="text-xs sm:text-sm text-charcoal/85 italic leading-relaxed font-outfit mb-4">
-                      "{test.comment}"
+                      &quot;{test.comment}&quot;
                     </p>
 
                     <div className="flex items-center justify-between">

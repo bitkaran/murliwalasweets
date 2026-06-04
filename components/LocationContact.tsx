@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { Phone, MapPin, Clock, Navigation, CheckCircle2 } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 import Button from "./ui/Button";
-import Card from "./ui/Card";
 
 export const LocationContact: React.FC = () => {
   return (
@@ -68,7 +67,7 @@ export const LocationContact: React.FC = () => {
                   </div>
                 </div>
 
-                {/* 2. Landmarks Checkpoints */}
+                {/* 2. Landmarks Guide */}
                 <div className="flex gap-4">
                   <div className="shrink-0 p-3 rounded-2xl bg-primary/5 text-primary border border-accent/15 h-fit">
                     <Navigation className="w-6 h-6" />
@@ -112,31 +111,26 @@ export const LocationContact: React.FC = () => {
             {/* Quick CTAs Box */}
             <div className="space-y-4 pt-8 mt-8 border-t border-accent/15">
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
+                <Button
+                  variant="gold"
                   href={BUSINESS_INFO.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1"
+                  className="flex-1 w-full text-primary-dark"
+                  icon={<Navigation className="w-4 h-4" />}
+                  iconPosition="left"
                 >
-                  <Button
-                    variant="gold"
-                    className="w-full text-primary-dark"
-                    icon={<Navigation className="w-4 h-4" />}
-                    iconPosition="left"
-                  >
-                    Get Directions
-                  </Button>
-                </a>
-                <a href={BUSINESS_INFO.phoneCallUrl} className="flex-1">
-                  <Button
-                    variant="primary"
-                    className="w-full text-cream"
-                    icon={<Phone className="w-4 h-4 text-accent-light" />}
-                    iconPosition="left"
-                  >
-                    Call: {BUSINESS_INFO.phoneDisplay}
-                  </Button>
-                </a>
+                  Get Directions
+                </Button>
+                <Button
+                  variant="primary"
+                  href={BUSINESS_INFO.phoneCallUrl}
+                  className="flex-1 w-full text-cream"
+                  icon={<Phone className="w-4 h-4 text-accent-light" />}
+                  iconPosition="left"
+                >
+                  Call: {BUSINESS_INFO.phoneDisplay}
+                </Button>
               </div>
             </div>
 
