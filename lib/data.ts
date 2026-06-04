@@ -310,7 +310,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-9",
     title: "Murliwala Store Front & Display",
     category: "shop",
-    image: "/images/gallery-shop-interior.png",
+    image: "/images/shop-front.png",
     alt: "Murliwala Sweets counter display and shop interior"
   }
 ];
