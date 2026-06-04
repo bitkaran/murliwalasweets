@@ -53,14 +53,14 @@ export const WhyChooseUs: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
               {pillars.map((pil, idx) => (
                 <div key={idx} className="flex gap-4">
-                  <div className="shrink-0 p-3 rounded-2xl bg-primary/5 text-primary border border-accent/10 h-fit">
+                  <div className="shrink-0 p-3 rounded-2xl bg-accent/10 text-primary border border-accent/25 h-fit">
                     {pil.icon}
                   </div>
                   <div className="space-y-1">
                     <h3 className="font-bold text-base text-primary-dark font-outfit">
                       {pil.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-charcoal/70 font-outfit leading-relaxed">
+                    <p className="text-xs sm:text-sm text-charcoal/80 font-outfit leading-relaxed">
                       {pil.desc}
                     </p>
                   </div>
@@ -76,7 +76,7 @@ export const WhyChooseUs: React.FC = () => {
 
             <div className="space-y-4">
               {/* Google Reviews Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-white shadow-xs border border-accent/20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-ivory shadow-sm border border-accent/30">
                 <span className="flex text-amber-500">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-amber-500" />
@@ -85,12 +85,12 @@ export const WhyChooseUs: React.FC = () => {
                 <span className="text-xs font-bold text-primary font-outfit">
                   4.2/5 Average Rating
                 </span>
-                <span className="text-[10px] text-charcoal/40 font-outfit">
-                  (Customer trust highlights — please verify with shop owner before final launch)
+                <span className="text-[10px] text-charcoal/50 font-outfit">
+                  (Customer trust highlights)
                 </span>
               </div>
 
-              <h3 className="text-2xl font-black text-primary font-playfair">
+              <h3 className="text-2xl font-bold text-primary font-playfair">
                 Loved by Local Customers
               </h3>
             </div>
@@ -107,7 +107,7 @@ export const WhyChooseUs: React.FC = () => {
                 >
                   <Card
                     hoverEffect={false}
-                    className="p-6 bg-white/60 hover:bg-white transition-colors duration-300 relative border-l-4 border-l-accent"
+                    className="p-6 bg-ivory border border-accent/25 border-l-4 border-l-accent transition-all duration-300 relative shadow-sm"
                   >
                     <Quote className="absolute top-4 right-6 w-8 h-8 text-accent/10 pointer-events-none" />
                     

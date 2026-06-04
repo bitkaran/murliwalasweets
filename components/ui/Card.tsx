@@ -24,7 +24,7 @@ export const Card: React.FC<CardProps> = ({
       transition={{ duration: 0.5, ease: "easeOut" }}
       whileHover={hoverEffect ? { y: -8, transition: { duration: 0.3 } } : {}}
       onClick={onClick}
-      className={`glass-card rounded-3xl overflow-hidden shadow-md border border-accent/10 transition-colors duration-300 ${onClick ? "cursor-pointer" : ""} ${className}`}
+      className={`bg-ivory rounded-3xl overflow-hidden shadow-md hover:shadow-lg border border-accent/25 transition-all duration-300 ${onClick ? "cursor-pointer" : ""} ${className}`}
     >
       {children}
     </motion.div>

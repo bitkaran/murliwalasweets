@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #600A1D;
-  --color-primary-dark: #3D0210;
-  --color-accent: #D99B26;
-  --color-accent-light: #F5B041;
-  --color-cream: #FAF6F0;
-  --color-cream-dark: #F3EDE2;
-  --color-charcoal: #231F20;
+  --color-primary: #A30D12;
+  --color-primary-dark: #6D0D12;
+  --color-accent: #D4A548;
+  --color-accent-light: #E0A12B;
+  --color-cream: #F8F1E7;
+  --color-cream-dark: #EADCC8;
+  --color-charcoal: #3B2418;
+  --color-ivory: #FFF9F0;
   --color-whatsapp: #25D366;
   
   --font-playfair: var(--font-playfair), serif;
@@ -27,7 +28,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
@@ -36,70 +37,61 @@
 }
 
 body {
-  background-color: var(--color-cream);
-  color: var(--color-charcoal);
+  background-color: #F8F1E7; /* Cream Background */
+  color: #3B2418; /* Dark Brown Text */
   font-family: var(--font-outfit);
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair);
+  color: #3B2418;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar to match Brand Colors */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF6F0;
+  background: #F8F1E7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D99B26;
+  background: #D4A548;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #600A1D;
+  background: #A30D12;
 }
 
-/* Elegant Glassmorphism utility */
-.glass-nav {
-  background: rgba(96, 10, 29, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(217, 155, 38, 0.2);
+/* Elegant borders and traditional surface styles */
+.border-gold {
+  border-color: #D4A548;
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(217, 155, 38, 0.15);
+.bg-maroon-surface {
+  background-color: #6D0D12;
 }
 
-.glass-card-dark {
-  background: rgba(61, 2, 16, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(217, 155, 38, 0.25);
+.bg-cream-surface {
+  background-color: #FFF9F0; /* Accent Ivory */
 }
 
 /* Indian Festive Mandana/Rangoli Background Pattern (subtle opacity) */
 .festive-bg-pattern {
-  background-image: radial-gradient(rgba(217, 155, 38, 0.05) 1px, transparent 0);
-  background-size: 24px 24px;
+  background-image: radial-gradient(#D4A548 1.2px, transparent 0);
+  background-size: 32px 32px;
+  background-color: #F8F1E7;
 }
 
-/* Premium gradient overlays */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #F5B041 0%, #D99B26 50%, #9C6C11 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #D4A548;
 }
 
 .gold-gradient-bg {
-  background: linear-gradient(135deg, #F5B041 0%, #D99B26 100%);
+  background-color: #D4A548;
 }
 
 .crimson-gradient-bg {
-  background: linear-gradient(135deg, #600A1D 0%, #3D0210 100%);
+  background-color: #A30D12;
 }
+

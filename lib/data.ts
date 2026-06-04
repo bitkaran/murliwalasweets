@@ -63,7 +63,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Thick, creamy condensed milk dessert sweetened with cardamom and topped with saffron and chopped pistachios.",
     price: "₹480 / kg",
     category: "sweets",
-    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=600&auto=format&fit=crop",
+    image: "/images/signature-sweets-assortment.png",
     isSpecial: true
   },
   {
@@ -73,7 +73,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Rich, velvety sweet rounds prepared with fresh khoya, saffron, and cardamom. A local favourite.",
     price: "₹440 / kg",
     category: "sweets",
-    image: "https://images.unsplash.com/photo-1601356616077-695728ecf769?q=80&w=600&auto=format&fit=crop",
+    image: "/images/signature-sweets-assortment.png",
     isSpecial: true,
     isDesiGhee: true
   },
@@ -84,7 +84,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Traditional Bengali sweet made from fresh paneer, cooked in sugar syrup, and rolled in desiccated coconut.",
     price: "₹380 / kg",
     category: "sweets",
-    image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?q=80&w=600&auto=format&fit=crop", // Elegant Indian dessert photo
+    image: "/images/signature-sweets-assortment.png",
     isSpecial: false
   },
   {
@@ -94,7 +94,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Delicate, melt-in-mouth milk sweets originating from Bengal, flavored with cardamom, saffron, and pistachios.",
     price: "₹460 / kg",
     category: "sweets",
-    image: "https://images.unsplash.com/photo-1601356616077-695728ecf769?q=80&w=600&auto=format&fit=crop", // Premium sweets placeholder
+    image: "/images/signature-sweets-assortment.png",
     isSpecial: false
   },
   {
@@ -104,7 +104,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Rich, golden fried pancakes soaked in saffron syrup, served warm with rabdi or nuts. Crispy edges, soft center.",
     price: "₹360 / kg",
     category: "sweets",
-    image: "https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=600&auto=format&fit=crop", // Rich festive syrup sweets
+    image: "/images/signature-sweets-assortment.png",
     isSpecial: true,
     isDesiGhee: true
   },
@@ -115,7 +115,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Circular flower-like sweet made of black gram batter, fried in pure desi ghee and soaked in warm sugar syrup.",
     price: "₹340 / kg",
     category: "sweets",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600&auto=format&fit=crop", // Jalebi/Imarti style
+    image: "/images/signature-sweets-assortment.png",
     isSpecial: false,
     isDesiGhee: true
   },
@@ -126,7 +126,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Crispy, hot, circular-coiled sweets fermented with local yogurt, fried and immersed in pure saffron syrup.",
     price: "₹180 / kg",
     category: "sweets",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600&auto=format&fit=crop",
+    image: "/images/signature-sweets-assortment.png",
     isSpecial: true
   },
 
@@ -138,7 +138,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Flaky pastry pockets filled with perfectly spiced potatoes, green peas, and local Rajasthani whole spices.",
     price: "₹15 / pc",
     category: "snacks",
-    image: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=600&auto=format&fit=crop",
+    image: "/images/snacks-kachori-jhaal-moodi.png",
     isSpecial: true
   },
   {
@@ -148,7 +148,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Crispy, deep-fried bread fritters stuffed with seasoned potato filling, coated in chickpea flour batter.",
     price: "₹20 / pc",
     category: "snacks",
-    image: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=600&auto=format&fit=crop", // Snacking placeholder
+    image: "/images/snacks-kachori-jhaal-moodi.png",
     isSpecial: false
   },
   {
@@ -158,7 +158,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Spongy, light, steamed chickpea flour cakes tempered with mustard seeds, curry leaves, and green chillies.",
     price: "₹30 / plate",
     category: "snacks",
-    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=600&auto=format&fit=crop",
+    image: "/images/snacks-kachori-jhaal-moodi.png",
     isSpecial: true
   },
   {
@@ -168,7 +168,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "A traditional rustic Rajasthani combination of hot green leafy saag served with thick, wood-fired bajra/wheat rota.",
     price: "₹80 / plate",
     category: "snacks",
-    image: "https://images.unsplash.com/photo-1605666804764-7967a902db76?q=80&w=600&auto=format&fit=crop", // Rustic Indian platter placeholder
+    image: "/images/snacks-kachori-jhaal-moodi.png",
     isSpecial: true
   },
   {
@@ -178,7 +178,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Unique sweet & savory flaky pastry filled with jaggery, crushed fennel, nuts, and select dessert spices.",
     price: "₹25 / pc",
     category: "snacks",
-    image: "https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=600&auto=format&fit=crop", // Sweets pastry
+    image: "/images/snacks-kachori-jhaal-moodi.png",
     isSpecial: false
   },
 
@@ -190,7 +190,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Crumbly, melt-in-mouth cardamon biscuits baked fresh daily using pure home-style desi ghee.",
     price: "₹360 / kg",
     category: "namkeen",
-    image: "https://images.unsplash.com/photo-1605666804764-7967a902db76?q=80&w=600&auto=format&fit=crop", // Baked cookies/savory
+    image: "/images/snacks-kachori-jhaal-moodi.png",
     isSpecial: false,
     isDesiGhee: true
   },
@@ -201,7 +201,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "A crispy, spicy blend of gram flour sev, lentils, peanuts, and dry spices. Perfect for tea-time.",
     price: "₹240 / kg",
     category: "namkeen",
-    image: "https://images.unsplash.com/photo-1605666804764-7967a902db76?q=80&w=600&auto=format&fit=crop",
+    image: "/images/snacks-kachori-jhaal-moodi.png",
     isSpecial: true
   },
   {
@@ -211,7 +211,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Crispy, layered savory crackers spiced with ajwain (carom seeds), best enjoyed with green chilli pickle.",
     price: "₹200 / kg",
     category: "namkeen",
-    image: "https://images.unsplash.com/photo-1605666804764-7967a902db76?q=80&w=600&auto=format&fit=crop",
+    image: "/images/snacks-kachori-jhaal-moodi.png",
     isSpecial: false
   },
   {
@@ -221,7 +221,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Light, airy, multi-layered puffed pastry biscuits, freshly baked to a golden crisp. Tea's perfect companion.",
     price: "₹180 / kg",
     category: "namkeen",
-    image: "https://images.unsplash.com/photo-1605666804764-7967a902db76?q=80&w=600&auto=format&fit=crop",
+    image: "/images/snacks-kachori-jhaal-moodi.png",
     isSpecial: false
   },
 
@@ -233,7 +233,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Crispy pastry pockets loaded with rich sweetened khoya, dry fruits, saffron, and deep fried in pure ghee.",
     price: "₹460 / kg",
     category: "festive",
-    image: "https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=600&auto=format&fit=crop", // Festive pastry
+    image: "/images/signature-sweets-assortment.png",
     isSpecial: true,
     isDesiGhee: true
   },
@@ -244,7 +244,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Customisable luxury sweets box featuring Kesar Peda, Sandesh, Chamcham, and dry-fruit loaded bites.",
     price: "₹650 onwards",
     category: "festive",
-    image: "https://images.unsplash.com/photo-1601356616077-695728ecf769?q=80&w=600&auto=format&fit=crop", // Premium luxury box placeholder
+    image: "/images/festive-gift-box-assortment.png",
     isSpecial: true
   }
 ];
@@ -252,45 +252,66 @@ export const MENU_ITEMS: MenuItem[] = [
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "gal-1",
-    title: "Fresh Rabdi Boiling",
-    category: "shop",
-    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=600&auto=format&fit=crop",
-    alt: "Boiling fresh milk for Rabdi at Murliwala Sweets"
+    title: "Golden Swamani Prasad Box",
+    category: "festive",
+    image: "/images/gallery-custom-swamani-box.jpg",
+    alt: "Custom Swamani box sweet packaging from Murliwala Sweets"
   },
   {
     id: "gal-2",
-    title: "Golden Saffron Jalebi",
+    title: "Pure Desi Ghee Besan Laddu",
     category: "sweets",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600&auto=format&fit=crop",
-    alt: "Hot crispy Jalebi dipping in saffron sugar syrup"
+    image: "/images/gallery-besan-laddu-poster.jpg",
+    alt: "Premium Besan Laddu made in pure Desi Ghee"
   },
   {
     id: "gal-3",
-    title: "Spiced Masala Samosa",
+    title: "Crispy Rajasthani Gud Kachori",
     category: "snacks",
-    image: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=600&auto=format&fit=crop",
-    alt: "Golden brown crisp samosas served with chutney"
+    image: "/images/gallery-gud-kachori-poster.jpg",
+    alt: "Sweet & savory Gud Kachori poster"
   },
   {
     id: "gal-4",
-    title: "Steaming Khaman Dhokla",
+    title: "Hot Kadi Kachori Serving",
     category: "snacks",
-    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=600&auto=format&fit=crop",
-    alt: "Spongy Gujarati Khaman Dhokla garnished with mustard and coriander"
+    image: "/images/gallery-kadi-kachori-poster.jpg",
+    alt: "Rajasthani Kadi Kachori poster"
   },
   {
     id: "gal-5",
-    title: "Holi Special Kesar Gujiya",
-    category: "festive",
-    image: "https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=600&auto=format&fit=crop",
-    alt: "Mouth-watering Gujiyas stacked ready for Diwali and Holi festivals"
+    title: "Dilkhushal (Thal Barfi)",
+    category: "sweets",
+    image: "/images/gallery-dilkhushal-poster.jpg",
+    alt: "Traditional Rajasthani Dilkhushal sweet poster"
   },
   {
     id: "gal-6",
-    title: "Saffron Pedas Layout",
+    title: "Special Winter Til/Gud Chikki",
     category: "sweets",
-    image: "https://images.unsplash.com/photo-1601356616077-695728ecf769?q=80&w=600&auto=format&fit=crop",
-    alt: "Pistachio-garnished Kesar Pedas arranged elegantly"
+    image: "/images/gallery-special-chikki-poster.jpg",
+    alt: "Crispy delicious Chikki poster"
+  },
+  {
+    id: "gal-7",
+    title: "Murliwala Premium Sweets",
+    category: "festive",
+    image: "/images/gallery-sona-nahi-mithai-khrido.jpg",
+    alt: "Murliwala sweets brand poster"
+  },
+  {
+    id: "gal-8",
+    title: "Spicy Rajasthani Jhaal Moodi",
+    category: "snacks",
+    image: "/images/gallery-jhaal-moodi-poster.jpg",
+    alt: "Delicious crispy Jhaal Moodi poster"
+  },
+  {
+    id: "gal-9",
+    title: "Murliwala Store Front & Display",
+    category: "shop",
+    image: "/images/gallery-shop-interior.png",
+    alt: "Murliwala Sweets counter display and shop interior"
   }
 ];
 

@@ -48,7 +48,7 @@ export const Specialties: React.FC = () => {
             return (
               <Card
                 key={item.id}
-                className="group flex flex-col h-full bg-cream border border-accent/15 hover:border-accent transition-colors duration-300"
+                className="group flex flex-col h-full bg-ivory border border-accent/30 hover:border-accent shadow-md hover:shadow-lg transition-all duration-300"
               >
                 {/* Image Container with Badges */}
                 <div className="relative h-56 w-full overflow-hidden">
@@ -56,21 +56,21 @@ export const Specialties: React.FC = () => {
                     src={item.image}
                     alt={item.name}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   
-                  {/* Glassy Background Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60 pointer-events-none" />
+                  {/* Subtle Dark Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-70 pointer-events-none" />
 
                   {/* Top Row Badges */}
                   <div className="absolute top-4 left-4 right-4 flex justify-between items-center z-10">
                     {item.isDesiGhee && (
-                      <span className="px-3 py-1 rounded-full bg-accent text-primary-dark font-semibold text-[10px] sm:text-xs flex items-center gap-1 shadow-md font-outfit">
+                      <span className="px-3 py-1 rounded-full bg-accent text-primary-dark font-bold text-[10px] sm:text-xs flex items-center gap-1 shadow-sm font-outfit">
                         <Sparkles className="w-3.5 h-3.5 fill-primary-dark/20" />
                         Desi Ghee
                       </span>
                     )}
-                    <span className="ml-auto px-2.5 py-1 rounded-full bg-primary/95 text-accent-light font-bold text-[10px] uppercase tracking-wide font-outfit">
+                    <span className="ml-auto px-2.5 py-1 rounded-full bg-primary text-ivory font-bold text-[10px] uppercase tracking-wider font-outfit shadow-sm">
                       Signature
                     </span>
                   </div>
@@ -78,7 +78,7 @@ export const Specialties: React.FC = () => {
                   {/* Hindi Title inside image overlay bottom */}
                   {item.hindiName && (
                     <div className="absolute bottom-4 left-4 z-10">
-                      <span className="text-xl md:text-2xl font-black text-white/95 font-playfair bg-black/35 px-2 py-0.5 rounded-lg backdrop-blur-xs">
+                      <span className="text-xl md:text-2xl font-bold text-ivory font-playfair bg-primary-dark/85 px-3 py-0.5 rounded-lg border border-accent/20">
                         {item.hindiName}
                       </span>
                     </div>
@@ -88,18 +88,18 @@ export const Specialties: React.FC = () => {
                 {/* Content Box */}
                 <div className="p-6 flex flex-col justify-between flex-grow space-y-4">
                   <div className="space-y-2">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-start justify-between gap-2">
                       <h3 className="text-lg md:text-xl font-bold text-primary font-playfair group-hover:text-accent transition-colors duration-200">
                         {item.name}
                       </h3>
                       {item.price && (
-                        <span className="font-semibold text-sm text-accent-light bg-primary-dark/95 px-2.5 py-1 rounded-lg font-outfit">
+                        <span className="font-bold text-xs sm:text-sm text-primary bg-accent/20 border border-accent/40 px-2 py-0.5 rounded-lg font-outfit shrink-0 whitespace-nowrap">
                           {item.price}
                         </span>
                       )}
                     </div>
                     
-                    <p className="text-xs sm:text-sm text-charcoal/70 font-outfit leading-relaxed min-h-[60px] line-clamp-3">
+                    <p className="text-xs sm:text-sm text-charcoal/80 font-outfit leading-relaxed min-h-[60px] line-clamp-3">
                       {item.description}
                     </p>
                   </div>
@@ -112,7 +112,7 @@ export const Specialties: React.FC = () => {
                       href={itemOrderUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full text-xs font-semibold py-2.5 border border-accent/20"
+                      className="w-full text-xs font-semibold py-2.5"
                       icon={<MessageSquare className="w-4 h-4" />}
                       iconPosition="left"
                     >

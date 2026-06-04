@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, MessageSquare, MapPin } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
@@ -38,37 +39,42 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "glass-nav py-3 shadow-lg"
-            : "bg-transparent py-5"
+            ? "bg-cream/95 backdrop-blur-md py-3 shadow-md border-b border-accent/30"
+            : "bg-cream/90 backdrop-blur-xs py-4 border-b border-accent/15"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <a href="#home" className="flex flex-col group cursor-pointer">
-              <span className={`text-2xl md:text-3xl font-black tracking-wide font-playfair transition-colors duration-300 ${
-                scrolled ? "text-cream" : "text-primary"
-              }`}>
-                MURLIWALA
-              </span>
-              <span className={`text-xs md:text-sm font-semibold tracking-widest font-outfit uppercase -mt-1 transition-colors duration-300 ${
-                scrolled ? "text-accent-light" : "text-accent"
-              }`}>
-                Sweets & Snacks
-              </span>
+            {/* Logo Prominence */}
+            <a href="#home" className="flex items-center gap-3 group cursor-pointer">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-accent shadow-sm shrink-0">
+                <Image
+                  src="/images/murliwala-logo.jpg"
+                  alt="Murliwala Sweets Logo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl md:text-2xl font-black tracking-wide font-playfair text-primary leading-tight">
+                  MURLIWALA
+                </span>
+                <span className="text-[10px] font-bold tracking-widest font-outfit uppercase text-accent -mt-0.5">
+                  Sweets & Snacks
+                </span>
+              </div>
             </a>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation with Underline Animation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`text-sm font-medium tracking-wide uppercase transition-colors duration-200 hover:text-accent-light ${
-                    scrolled ? "text-cream/90" : "text-primary-dark"
-                  }`}
+                  className="text-xs font-bold tracking-widest uppercase text-charcoal hover:text-primary transition-colors duration-200 relative py-2 group font-outfit"
                 >
                   {link.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full" />
                 </a>
               ))}
             </nav>
@@ -89,9 +95,7 @@ export const Navbar: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`lg:hidden p-2 rounded-full cursor-pointer focus:outline-none transition-colors ${
-                scrolled ? "text-cream hover:bg-white/10" : "text-primary hover:bg-primary/5"
-              }`}
+              className="lg:hidden p-2 rounded-full cursor-pointer focus:outline-none transition-colors text-primary hover:bg-primary/5"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -115,19 +119,29 @@ export const Navbar: React.FC = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] crimson-gradient-bg p-6 text-cream shadow-2xl flex flex-col justify-between"
+              className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-primary-dark p-6 text-cream shadow-2xl flex flex-col justify-between"
               onClick={(e) => e.stopPropagation()}
             >
               <div>
                 {/* Header inside drawer */}
                 <div className="flex items-center justify-between pb-6 border-b border-cream/15">
-                  <div className="flex flex-col">
-                    <span className="text-xl font-bold tracking-wide font-playfair text-cream">
-                      MURLIWALA
-                    </span>
-                    <span className="text-[10px] font-semibold tracking-widest font-outfit uppercase text-accent-light -mt-1">
-                      Sweets & Snacks
-                    </span>
+                  <div className="flex items-center gap-2">
+                    <div className="relative w-8 h-8 rounded-full overflow-hidden border border-accent/40 shrink-0">
+                      <Image
+                        src="/images/murliwala-logo.jpg"
+                        alt="Murliwala Sweets Logo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-lg font-bold tracking-wide font-playfair text-cream">
+                        MURLIWALA
+                      </span>
+                      <span className="text-[9px] font-semibold tracking-widest font-outfit uppercase text-accent-light -mt-1">
+                        Sweets & Snacks
+                      </span>
+                    </div>
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}

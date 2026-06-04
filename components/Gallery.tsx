@@ -48,10 +48,10 @@ export const Gallery: React.FC = () => {
             <button
               key={tab.value}
               onClick={() => setActiveFilter(tab.value)}
-              className={`px-4 py-2 rounded-full text-xs md:text-sm font-semibold tracking-wide font-outfit transition-all duration-300 cursor-pointer border ${
+              className={`px-4 py-2 rounded-full text-xs md:text-sm font-bold tracking-wide font-outfit transition-all duration-300 cursor-pointer border ${
                 activeFilter === tab.value
-                  ? "bg-primary text-cream border-primary shadow-sm"
-                  : "bg-white/60 text-primary border-accent/20 hover:bg-primary-dark/5"
+                  ? "bg-primary text-ivory border-primary shadow-sm"
+                  : "bg-ivory text-primary border-accent/35 hover:bg-accent/10"
               }`}
             >
               {tab.label}
@@ -73,7 +73,7 @@ export const Gallery: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="break-inside-avoid relative rounded-2xl overflow-hidden shadow-md border border-accent/15 group aspect-auto bg-cream"
+                className="break-inside-avoid relative rounded-2xl overflow-hidden shadow-md border border-accent/30 group aspect-auto bg-ivory"
               >
                 {/* Image element */}
                 <div className="relative overflow-hidden w-full h-[240px] sm:h-[320px]">
@@ -82,15 +82,15 @@ export const Gallery: React.FC = () => {
                     alt={item.alt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-primary-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 z-10">
-                    <div className="p-2 w-fit rounded-full bg-accent/20 text-accent-light mb-3">
+                  <div className="absolute inset-0 bg-primary-dark/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 z-10">
+                    <div className="p-2 w-fit rounded-full bg-accent/20 text-accent mb-3">
                       <Eye className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] text-accent-light font-bold uppercase tracking-wider font-outfit">
+                    <span className="text-[10px] text-accent font-bold uppercase tracking-wider font-outfit">
                       {item.category}
                     </span>
                     <h3 className="text-lg font-bold text-white font-playfair mt-0.5">
@@ -99,11 +99,11 @@ export const Gallery: React.FC = () => {
                   </div>
                   
                   {/* Subtle Gradient Shadow (Normal state) */}
-                  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/35 to-transparent pointer-events-none group-hover:opacity-0 transition-opacity duration-300" />
+                  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/45 to-transparent pointer-events-none group-hover:opacity-0 transition-opacity duration-300" />
                   
                   {/* Label (Normal state) */}
                   <div className="absolute bottom-4 left-4 z-10 group-hover:opacity-0 transition-opacity duration-200">
-                    <span className="text-xs font-semibold text-white/95 font-outfit drop-shadow-sm">
+                    <span className="text-xs font-semibold text-ivory font-outfit drop-shadow-sm bg-black/40 px-2 py-0.5 rounded">
                       {item.title}
                     </span>
                   </div>

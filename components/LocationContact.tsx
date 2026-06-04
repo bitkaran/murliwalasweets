@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, MapPin, Clock, Navigation, CheckCircle2 } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
@@ -8,8 +9,8 @@ import Button from "./ui/Button";
 
 export const LocationContact: React.FC = () => {
   return (
-    <section id="contact" className="relative py-20 md:py-28 bg-cream-dark/10 overflow-hidden">
-      {/* Decorative accent gradients */}
+    <section id="contact" className="relative py-20 md:py-28 bg-cream-dark/20 overflow-hidden border-t border-accent/20">
+      {/* Decorative traditional motifs */}
       <div className="absolute top-[20%] right-[-10%] w-[350px] h-[350px] rounded-full bg-accent/5 filter blur-3xl" />
       <div className="absolute bottom-[20%] left-[-10%] w-[350px] h-[350px] rounded-full bg-primary/5 filter blur-3xl" />
 
@@ -20,11 +21,11 @@ export const LocationContact: React.FC = () => {
           <span className="text-accent font-bold tracking-widest text-sm uppercase block font-outfit">
             Store Locator
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary font-playfair leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary font-playfair leading-tight">
             Visit Our Sweets Counter
           </h2>
           <div className="w-20 h-1 bg-accent rounded-full mx-auto" />
-          <p className="text-charcoal/70 font-outfit text-sm sm:text-base">
+          <p className="text-charcoal/80 font-outfit text-sm sm:text-base">
             Drop by for freshly cooked breakfast, hot jalebis, or to custom design sweet boxes for your family celebrations.
           </p>
         </div>
@@ -56,12 +57,12 @@ export const LocationContact: React.FC = () => {
                 
                 {/* 1. Address Block */}
                 <div className="flex gap-4">
-                  <div className="shrink-0 p-3 rounded-2xl bg-primary/5 text-primary border border-accent/15 h-fit">
+                  <div className="shrink-0 p-3 rounded-2xl bg-primary/5 text-primary border border-accent/20 h-fit">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div className="space-y-1 font-outfit">
                     <h4 className="font-bold text-sm text-primary-dark">Our Address</h4>
-                    <p className="text-xs sm:text-sm text-charcoal/80 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-charcoal/85 leading-relaxed">
                       {BUSINESS_INFO.address}
                     </p>
                   </div>
@@ -69,12 +70,12 @@ export const LocationContact: React.FC = () => {
 
                 {/* 2. Landmarks Guide */}
                 <div className="flex gap-4">
-                  <div className="shrink-0 p-3 rounded-2xl bg-primary/5 text-primary border border-accent/15 h-fit">
+                  <div className="shrink-0 p-3 rounded-2xl bg-primary/5 text-primary border border-accent/20 h-fit">
                     <Navigation className="w-6 h-6" />
                   </div>
                   <div className="space-y-2 font-outfit">
                     <h4 className="font-bold text-sm text-primary-dark">Landmarks Guide</h4>
-                    <ul className="text-xs sm:text-sm text-charcoal/80 space-y-1">
+                    <ul className="text-xs sm:text-sm text-charcoal/85 space-y-1">
                       <li className="flex items-center gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" />
                         Opposite Kamal Heights
@@ -93,12 +94,12 @@ export const LocationContact: React.FC = () => {
 
                 {/* 3. Timings Block */}
                 <div className="flex gap-4">
-                  <div className="shrink-0 p-3 rounded-2xl bg-primary/5 text-primary border border-accent/15 h-fit">
+                  <div className="shrink-0 p-3 rounded-2xl bg-primary/5 text-primary border border-accent/20 h-fit">
                     <Clock className="w-6 h-6" />
                   </div>
                   <div className="space-y-1 font-outfit">
                     <h4 className="font-bold text-sm text-primary-dark">Operating Hours</h4>
-                    <p className="text-xs sm:text-sm text-charcoal/80 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-charcoal/85 leading-relaxed">
                       {BUSINESS_INFO.operatingHours}
                     </p>
                   </div>
@@ -109,7 +110,7 @@ export const LocationContact: React.FC = () => {
             </div>
 
             {/* Quick CTAs Box */}
-            <div className="space-y-4 pt-8 mt-8 border-t border-accent/15">
+            <div className="space-y-4 pt-8 mt-8 border-t border-accent/20">
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   variant="gold"
@@ -125,8 +126,8 @@ export const LocationContact: React.FC = () => {
                 <Button
                   variant="primary"
                   href={BUSINESS_INFO.phoneCallUrl}
-                  className="flex-1 w-full text-cream"
-                  icon={<Phone className="w-4 h-4 text-accent-light" />}
+                  className="flex-1 w-full"
+                  icon={<Phone className="w-4 h-4 text-ivory" />}
                   iconPosition="left"
                 >
                   Call: {BUSINESS_INFO.phoneDisplay}
@@ -136,16 +137,30 @@ export const LocationContact: React.FC = () => {
 
           </motion.div>
 
-          {/* Right panel - Live Map Embed Container */}
+          {/* Right panel - Live Map & Shop Interior Embed Container */}
           <motion.div
             initial={{ opacity: 0, x: 35 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7"
+            className="lg:col-span-7 flex flex-col gap-6"
           >
-            <div className="relative w-full h-[320px] sm:h-[450px] lg:h-full min-h-[350px] rounded-3xl overflow-hidden shadow-lg border border-accent/25">
-              {/* Map iframe */}
+            {/* Shop Interior Image */}
+            <div className="relative w-full h-[200px] sm:h-[260px] rounded-3xl overflow-hidden shadow-md border-2 border-accent/35 bg-primary">
+              <Image
+                src="/images/gallery-shop-interior.png"
+                alt="Murliwala Sweets Shop Interior"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 z-10 text-ivory font-playfair font-bold text-lg drop-shadow-md">
+                Our Sweets Counter
+              </div>
+            </div>
+
+            {/* Map iframe */}
+            <div className="relative w-full h-[240px] sm:h-[300px] rounded-3xl overflow-hidden shadow-md border-2 border-accent/35">
               <iframe
                 src={BUSINESS_INFO.mapsEmbedIframe}
                 width="100%"

@@ -46,24 +46,24 @@ export const About: React.FC = () => {
             <div className="absolute -inset-4 rounded-3xl border-2 border-accent/20 translate-x-2 translate-y-2 pointer-events-none" />
             
             {/* Primary Image */}
-            <div className="relative h-[320px] sm:h-[450px] rounded-3xl overflow-hidden shadow-xl border border-accent/15">
+            <div className="relative h-[320px] sm:h-[450px] rounded-3xl overflow-hidden shadow-xl border border-accent/30">
               <Image
-                src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=600&auto=format&fit=crop"
-                alt="Boiling milk for fresh sweets prep"
+                src="/images/about-premium-sweets-display.png"
+                alt="Premium sweets display at Murliwala Sweets"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
               {/* Image Gradient Tint Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/30 to-transparent pointer-events-none" />
               
               {/* Badge overlay */}
-              <div className="absolute bottom-6 left-6 right-6 bg-primary-dark/90 backdrop-blur-md p-4 rounded-2xl border border-accent/35 flex items-center gap-3">
-                <div className="p-2.5 rounded-full bg-accent/20 text-accent-light">
+              <div className="absolute bottom-6 left-6 right-6 bg-primary-dark/95 p-4 rounded-2xl border border-accent/40 flex items-center gap-3 shadow-lg">
+                <div className="p-2.5 rounded-full bg-accent/20 text-accent">
                   <Sparkles className="w-6 h-6 animate-pulse" />
                 </div>
                 <div>
-                  <p className="text-xs text-accent-light font-semibold uppercase tracking-wider font-outfit">Pure Quality</p>
-                  <p className="text-sm font-semibold text-cream font-outfit">Daily fresh production</p>
+                  <p className="text-xs text-accent font-semibold uppercase tracking-wider font-outfit">Pure Quality</p>
+                  <p className="text-sm font-semibold text-ivory font-outfit">Daily fresh production</p>
                 </div>
               </div>
             </div>
@@ -81,18 +81,18 @@ export const About: React.FC = () => {
               <span className="text-accent font-bold tracking-widest text-sm uppercase block font-outfit">
                 Our Legacy
               </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary font-playfair leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary font-playfair leading-tight">
                 Crafting Sweet Memories in Jhunjhunu
               </h2>
               <div className="w-20 h-1 bg-accent rounded-full mt-2" />
             </div>
 
-            <div className="text-charcoal/80 space-y-4 font-outfit text-base md:text-lg leading-relaxed">
+            <div className="text-charcoal/90 space-y-4 font-outfit text-base md:text-lg leading-relaxed">
               <p>
-                Welcome to <strong className="text-primary font-semibold">Murliwala Sweets</strong>, where we bring you the finest traditional tastes of Rajasthan and India, crafted right in the heart of Jhunjhunu. Located in the bustling locality of <strong>Fauz Ka Mohalla</strong>, our shop has been a symbol of trust and premium quality for local families.
+                Welcome to <strong className="text-primary font-bold">Murliwala Sweets</strong>, where we bring you the finest traditional tastes of Rajasthan and India, crafted right in the heart of Jhunjhunu. Located in the bustling locality of <strong>Fauz Ka Mohalla</strong>, our shop has been a symbol of trust and premium quality for local families.
               </p>
               <p>
-                Whether it is our rich, slow-simmered <strong className="text-primary font-semibold">Rabdi</strong>, delicate Bengali <strong className="text-primary font-semibold">Sandesh</strong>, or hot crisp morning <strong className="text-primary font-semibold">Samosas</strong>, we maintain strict standards of preparation. Every recipe is a careful blend of age-old culinary methods and hygiene.
+                Whether it is our rich, slow-simmered <strong className="text-primary font-bold">Rabdi</strong>, delicate Bengali <strong className="text-primary font-bold">Sandesh</strong>, or hot crisp morning <strong className="text-primary font-bold">Samosas</strong>, we maintain strict standards of preparation. Every recipe is a careful blend of age-old culinary methods and hygiene.
               </p>
               <p>
                 We believe that festivals and family celebrations are incomplete without sweets that reflect purity. That is why we dedicate ourselves to using 100% Desi Ghee and fresh ingredients, bringing smiles to your celebrations.
@@ -100,11 +100,11 @@ export const About: React.FC = () => {
             </div>
 
             {/* highlights list */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-accent/15">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-accent/20">
               {highlights.map((item, idx) => (
                 <div key={idx} className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <span className="p-2 rounded-xl bg-primary/5 text-primary">
+                    <span className="p-2 rounded-xl bg-accent/10 text-primary border border-accent/25">
                       {item.icon}
                     </span>
                     <h3 className="font-bold text-sm md:text-base text-primary-dark font-outfit">
