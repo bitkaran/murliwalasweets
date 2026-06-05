@@ -22,11 +22,11 @@ export const Hero: React.FC = () => {
           alt="Murliwala Sweets Premium Mithai Spread"
           fill
           priority
-          className="object-cover object-[68%_center] md:object-center scale-100 filter brightness-[0.45] md:brightness-[0.55] contrast-[1.05]"
+          className="object-cover object-[68%_center] md:object-center scale-100 filter brightness-[0.55] contrast-[1.05]"
         />
         {/* Soft Traditional Maroon Gradient Overlay - Layered Responsive Overlays */}
-        <div className="absolute inset-0 bg-primary-dark/40 md:bg-primary-dark/25 z-[1]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-black/30 z-[2]" />
+        <div className="absolute inset-0 bg-primary-dark/25 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-black/20 z-[2]" />
       </div>
 
       {/* Subtle Floating Decorative Elements */}

@@ -6,6 +6,25 @@ import PageBanner from "@/components/PageBanner";
 export const metadata: Metadata = {
   title: "Contact Murliwala Sweets Jhunjhunu | Address & Location",
   description: "Find Murliwala Sweets in Fauz Ka Mohalla, Jhunjhunu. View our Google Maps location, opening hours, landmarks, and contact us directly on WhatsApp or Call.",
+  openGraph: {
+    title: "Contact Murliwala Sweets Jhunjhunu | Address & Location",
+    description: "Find Murliwala Sweets in Fauz Ka Mohalla, Jhunjhunu. View our Google Maps location, opening hours, landmarks, and contact us directly on WhatsApp or Call.",
+    images: [
+      {
+        url: "/images/gallery/gallery-shop-interior.png",
+        width: 1200,
+        height: 630,
+        alt: "Murliwala Sweets Shop Counter Location"
+      }
+    ],
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Murliwala Sweets Jhunjhunu | Address & Location",
+    description: "Find Murliwala Sweets in Fauz Ka Mohalla, Jhunjhunu. View our Google Maps location, opening hours, landmarks, and contact us directly on WhatsApp or Call.",
+    images: ["/images/gallery/gallery-shop-interior.png"]
+  }
 };
 
 export default function ContactPage() {

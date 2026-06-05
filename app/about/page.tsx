@@ -8,6 +8,25 @@ import PageBanner from "@/components/PageBanner";
 export const metadata: Metadata = {
   title: "About Murliwala Sweets | Traditional Rajasthani Legacy",
   description: "Learn about the rich heritage, pure Desi Ghee ingredients, and handcrafted sweets of Murliwala Sweets in Jhunjhunu, Rajasthan.",
+  openGraph: {
+    title: "About Murliwala Sweets | Traditional Rajasthani Legacy",
+    description: "Learn about the rich heritage, pure Desi Ghee ingredients, and handcrafted sweets of Murliwala Sweets in Jhunjhunu, Rajasthan.",
+    images: [
+      {
+        url: "/images/gallery/about-premium-sweets-display.png",
+        width: 1200,
+        height: 630,
+        alt: "About Murliwala Sweets Legacy"
+      }
+    ],
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Murliwala Sweets | Traditional Rajasthani Legacy",
+    description: "Learn about the rich heritage, pure Desi Ghee ingredients, and handcrafted sweets of Murliwala Sweets in Jhunjhunu, Rajasthan.",
+    images: ["/images/gallery/about-premium-sweets-display.png"]
+  }
 };
 
 export default function AboutPage() {

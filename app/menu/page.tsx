@@ -9,6 +9,25 @@ import { FaWhatsapp } from "react-icons/fa";
 export const metadata: Metadata = {
   title: "Murliwala Sweets Menu | Traditional Mithai & Crispy Snacks",
   description: "Browse our delicious menu of Desi Ghee sweets, hot breakfast Samosas, Bread Koftas, Dhokla, and snacks in Jhunjhunu. Order instantly on WhatsApp.",
+  openGraph: {
+    title: "Murliwala Sweets Menu | Traditional Mithai & Crispy Snacks",
+    description: "Browse our delicious menu of Desi Ghee sweets, hot breakfast Samosas, Bread Koftas, Dhokla, and snacks in Jhunjhunu. Order instantly on WhatsApp.",
+    images: [
+      {
+        url: "/images/gallery/signature-sweets-assortment.png",
+        width: 1200,
+        height: 630,
+        alt: "Murliwala Sweets Menu Catalog"
+      }
+    ],
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Murliwala Sweets Menu | Traditional Mithai & Crispy Snacks",
+    description: "Browse our delicious menu of Desi Ghee sweets, hot breakfast Samosas, Bread Koftas, Dhokla, and snacks in Jhunjhunu. Order instantly on WhatsApp.",
+    images: ["/images/gallery/signature-sweets-assortment.png"]
+  }
 };
 
 export default function MenuPage() {

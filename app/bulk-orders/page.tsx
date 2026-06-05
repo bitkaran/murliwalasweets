@@ -9,6 +9,25 @@ import PageBanner from "@/components/PageBanner";
 export const metadata: Metadata = {
   title: "Murliwala Sweets Bulk & Festive Orders | Corporate & Wedding Gifting",
   description: "Enquire about bulk sweets packages, Swamani boxes, custom wedding trays, and corporate festive gifting hampers from Murliwala Sweets in Jhunjhunu.",
+  openGraph: {
+    title: "Murliwala Sweets Bulk & Festive Orders | Corporate & Wedding Gifting",
+    description: "Enquire about bulk sweets packages, Swamani boxes, custom wedding trays, and corporate festive gifting hampers from Murliwala Sweets in Jhunjhunu.",
+    images: [
+      {
+        url: "/images/gallery/bulk-orders-section.png",
+        width: 1200,
+        height: 630,
+        alt: "Murliwala Sweets Bulk & Festive Orders Gifting"
+      }
+    ],
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Murliwala Sweets Bulk & Festive Orders | Corporate & Wedding Gifting",
+    description: "Enquire about bulk sweets packages, Swamani boxes, custom wedding trays, and corporate festive gifting hampers from Murliwala Sweets in Jhunjhunu.",
+    images: ["/images/gallery/bulk-orders-section.png"]
+  }
 };
 
 export default function BulkOrdersPage() {

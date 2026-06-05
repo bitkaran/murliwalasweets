@@ -29,6 +29,7 @@ export const metadata: Metadata = {
   keywords: [
     "Murliwala Sweets",
     "sweets in Jhunjhunu",
+    "export sweets Rajasthan",
     "mithai shop in Jhunjhunu",
     "snacks in Jhunjhunu",
     "Rajasthani sweets",
@@ -43,13 +44,43 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Murliwala Sweets" }],
   robots: "index, follow",
+  icons: {
+    icon: [
+      { url: "/images/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon_io/favicon.ico", sizes: "any" }
+    ],
+    apple: [
+      { url: "/images/favicon_io/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+    ],
+    other: [
+      {
+        rel: "manifest",
+        url: "/images/favicon_io/site.webmanifest"
+      }
+    ]
+  },
   openGraph: {
     title: "Murliwala Sweets | Premium Mithai & Snacks in Jhunjhunu",
     description: "Handcrafted traditional Indian sweets, fresh daily snacks, and custom festive gifting. Loved by families across Jhunjhunu, Rajasthan.",
-    url: "https://murliwala-sweets.vercel.app", // Fallback URL
+    url: "https://murliwala-sweets.vercel.app",
     siteName: "Murliwala Sweets",
+    images: [
+      {
+        url: "/images/gallery/about-premium-sweets-display.png",
+        width: 1200,
+        height: 630,
+        alt: "Murliwala Sweets Premium Mithai Counter"
+      }
+    ],
     locale: "en_IN",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Murliwala Sweets | Premium Mithai & Snacks in Jhunjhunu",
+    description: "Handcrafted traditional Indian sweets, fresh daily snacks, and custom festive gifting. Loved by families across Jhunjhunu, Rajasthan.",
+    images: ["/images/gallery/about-premium-sweets-display.png"],
   },
 };
 
