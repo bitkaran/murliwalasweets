@@ -389,34 +389,27 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "gal-5",
-    title: "Customer Service Desk",
-    category: "shop",
-    image: "/images/gallery/contact-section.png",
-    alt: "Customer counter service at Murliwala Sweets shop"
-  },
-  {
-    id: "gal-6",
     title: "Sweets Shop Frontage",
     category: "shop",
     image: "/images/gallery/shop-front.png",
     alt: "Shop front board of Murliwala Sweets Jhunjhunu"
   },
   {
-    id: "gal-7",
+    id: "gal-6",
     title: "Clean Counter Display",
     category: "shop",
     image: "/images/gallery/gallery-shop-interior.png",
     alt: "Clean and hygienic sweet trays display counter"
   },
   {
-    id: "gal-8",
+    id: "gal-7",
     title: "Signature Sweet Assortments",
     category: "sweets",
     image: "/images/gallery/signature-sweets-assortment.png",
     alt: "Freshly prepared traditional sweet trays"
   },
   {
-    id: "gal-9",
+    id: "gal-8",
     title: "Rajasthani Farsan & Kachori",
     category: "snacks",
     image: "/images/gallery/snacks-kachori-jhaal-moodi.png",
