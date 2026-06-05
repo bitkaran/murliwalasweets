@@ -30,7 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   disabled,
 }) => {
-  const baseStyles = "inline-flex items-center justify-center font-semibold font-outfit rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-sm gap-2 whitespace-nowrap";
+  const baseStyles = "inline-flex items-center justify-center font-semibold font-outfit rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-sm gap-2 whitespace-nowrap";
   
   const variants = {
     primary: "bg-primary text-cream hover:bg-primary-dark border border-primary hover:border-primary-dark shadow-md",

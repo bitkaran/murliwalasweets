@@ -57,22 +57,22 @@ export const Footer: React.FC = () => {
             </button>
             <ul className={`${openSections.links ? "block" : "hidden"} md:block space-y-2 text-xs mt-3 md:mt-4`}>
               <li>
-                <Link href="/" className="hover:text-accent-light transition-colors">Home</Link>
+                <Link href="/" className="hover:text-accent-light transition-colors rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark">Home</Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-accent-light transition-colors">Our Story</Link>
+                <Link href="/about" className="hover:text-accent-light transition-colors rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark">Our Story</Link>
               </li>
               <li>
-                <Link href="/menu" className="hover:text-accent-light transition-colors">Menu Catalog</Link>
+                <Link href="/menu" className="hover:text-accent-light transition-colors rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark">Menu Catalog</Link>
               </li>
               <li>
-                <Link href="/bulk-orders" className="hover:text-accent-light transition-colors">Bulk Gifting</Link>
+                <Link href="/bulk-orders" className="hover:text-accent-light transition-colors rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark">Bulk Gifting</Link>
               </li>
               <li>
-                <Link href="/gallery" className="hover:text-accent-light transition-colors">Photo Gallery</Link>
+                <Link href="/gallery" className="hover:text-accent-light transition-colors rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark">Photo Gallery</Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-accent-light transition-colors">Visit Us</Link>
+                <Link href="/contact" className="hover:text-accent-light transition-colors rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark">Visit Us</Link>
               </li>
             </ul>
           </div>
@@ -93,7 +93,7 @@ export const Footer: React.FC = () => {
             <ul className={`${openSections.contact ? "block" : "hidden"} md:block space-y-3 text-xs mt-3 md:mt-4`}>
               <li className="flex gap-2">
                 <Phone className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <a href={BUSINESS_INFO.phoneCallUrl} className="hover:text-accent-light transition-colors font-semibold">
+                <a href={BUSINESS_INFO.phoneCallUrl} className="hover:text-accent-light transition-colors font-semibold rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark px-0.5">
                   {BUSINESS_INFO.phoneDisplay}
                 </a>
               </li>
@@ -136,9 +136,9 @@ export const Footer: React.FC = () => {
         <div className="pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] sm:text-xs text-cream/50 font-outfit">
           <p>© {currentYear} Murliwala Sweets. All Rights Reserved.</p>
           <div className="flex gap-4">
-            <Link href="/contact" className="hover:text-cream/80 transition-colors">Locate Shop</Link>
+            <Link href="/contact" className="hover:text-cream/80 transition-colors rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark">Locate Shop</Link>
             <span>•</span>
-            <a href={BUSINESS_INFO.whatsappUrl} className="hover:text-cream/80 transition-colors">WhatsApp Order</a>
+            <a href={BUSINESS_INFO.whatsappUrl} className="hover:text-cream/80 transition-colors rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark">WhatsApp Order</a>
           </div>
         </div>
 

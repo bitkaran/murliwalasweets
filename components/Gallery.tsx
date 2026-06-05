@@ -4,12 +4,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Eye } from "lucide-react";
-import { GALLERY_ITEMS } from "@/lib/data";
+import { GALLERY_ITEMS, GalleryItem } from "@/lib/data";
+import ImageLightbox from "./ui/ImageLightbox";
 
 type GalleryFilter = "all" | "sweets" | "snacks" | "festive" | "shop";
 
 export const Gallery: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<GalleryFilter>("all");
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   const filterTabs: { label: string; value: GalleryFilter }[] = [
     { label: "All Photos", value: "all" },
@@ -73,7 +75,15 @@ export const Gallery: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="break-inside-avoid relative rounded-2xl overflow-hidden shadow-md border border-accent/30 group aspect-auto bg-ivory"
+                tabIndex={0}
+                onClick={() => setSelectedItem(item)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setSelectedItem(item);
+                  }
+                }}
+                className="break-inside-avoid relative rounded-2xl overflow-hidden shadow-md border border-accent/30 group aspect-auto bg-ivory cursor-pointer outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
               >
                 {/* Image element */}
                 <div className="relative overflow-hidden w-full h-[240px] sm:h-[320px]">
@@ -119,6 +129,14 @@ export const Gallery: React.FC = () => {
         </div>
 
       </div>
+      <ImageLightbox
+        isOpen={!!selectedItem}
+        onClose={() => setSelectedItem(null)}
+        image={selectedItem?.image || ""}
+        title={selectedItem?.title || ""}
+        category={selectedItem?.category}
+        alt={selectedItem?.alt}
+      />
     </section>
   );
 };

@@ -21,11 +21,11 @@ export const Hero: React.FC = () => {
           alt="Murliwala Sweets Premium Mithai Spread"
           fill
           priority
-          className="object-cover object-[68%_center] md:object-center scale-100 filter brightness-[0.55] md:brightness-[0.35] contrast-[1.05]"
+          className="object-cover object-[68%_center] md:object-center scale-100 filter brightness-[0.55] md:brightness-[0.55] contrast-[1.05]"
         />
-        {/* Soft Traditional Maroon Gradient Overlay - Responsive Overlay */}
-        <div className="absolute inset-0 bg-primary-dark/45 md:bg-primary-dark/70 z-1" />
-        <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-black/30 z-2" />
+        {/* Soft Traditional Maroon Gradient Overlay - Layered Responsive Overlays */}
+        <div className="absolute inset-0 bg-primary-dark/35 md:bg-primary-dark/25 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-black/20 z-[2]" />
       </div>
 
       {/* Subtle Floating Decorative Elements */}
@@ -61,45 +61,48 @@ export const Hero: React.FC = () => {
 
       {/* Hero Content Box */}
       <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-cream">
-        {/* Small Traditional Welcome Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 border border-accent/40 backdrop-blur-xs text-xs md:text-sm font-semibold tracking-wider text-accent uppercase mb-6 font-outfit"
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-accent-light animate-pulse" />
-          Authentic Rajasthani Taste
-        </motion.div>
+        {/* Readability container card on mobile */}
+        <div className="max-w-4xl mx-auto bg-primary-dark/20 border border-accent/10 backdrop-blur-xs md:backdrop-blur-none p-6 sm:p-8 md:p-0 rounded-3xl md:bg-transparent md:border-transparent text-center shadow-lg md:shadow-none mb-8">
+          {/* Small Traditional Welcome Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 border border-accent/40 backdrop-blur-xs text-xs md:text-sm font-semibold tracking-wider text-accent uppercase mb-6 font-outfit"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-accent-light animate-pulse" />
+            Authentic Rajasthani Taste
+          </motion.div>
 
-        {/* Primary Title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none mb-2 font-playfair text-white drop-shadow-lg"
-        >
-          Murliwala <span className="text-accent">Sweets</span>
-        </motion.h1>
+          {/* Primary Title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none mb-2 font-playfair text-white drop-shadow-[0_2px_4px_rgba(109,38,36,0.65)]"
+          >
+            Murliwala <span className="text-accent">Sweets</span>
+          </motion.h1>
 
-        {/* Gold Decorative Separator */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <DecorativeDivider color="#f6ad56" className="py-2" />
-        </motion.div>
+          {/* Gold Decorative Separator */}
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <DecorativeDivider color="#f6ad56" className="py-2" />
+          </motion.div>
 
-        {/* Tagline / Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl font-medium text-ivory font-outfit leading-relaxed mb-10"
-        >
-          {BUSINESS_INFO.tagline}
-        </motion.p>
+          {/* Tagline / Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl font-medium text-ivory font-outfit leading-relaxed"
+          >
+            {BUSINESS_INFO.tagline}
+          </motion.p>
+        </div>
 
         {/* Actions Row */}
         <motion.div

@@ -48,18 +48,20 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo Prominence */}
-            <Link href="/" className="flex items-center group cursor-pointer">
+            <Link
+              href="/"
+              className="flex items-center group cursor-pointer outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-xl p-1"
+            >
               <Image
                 src="/images/brand/murliwalasweetslogo.png"
                 alt="Murliwala Sweets Logo"
                 width={160}
                 height={50}
-                className="w-36 md:w-44 h-auto shrink-0"
+                className="w-36 md:w-44 h-auto shrink-0 pointer-events-none"
                 priority
               />
             </Link>
 
-            {/* Desktop Navigation with Underline Animation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
@@ -67,7 +69,7 @@ export const Navbar: React.FC = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-xs font-bold tracking-widest uppercase transition-colors duration-200 relative py-2 group font-outfit ${
+                    className={`text-xs font-bold tracking-widest uppercase transition-colors duration-200 relative py-2 px-1 group font-outfit rounded-md outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
                       isActive ? "text-primary animate-pulse" : "text-charcoal hover:text-primary"
                     }`}
                   >
@@ -98,7 +100,7 @@ export const Navbar: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-full cursor-pointer focus:outline-none transition-colors text-primary hover:bg-primary/5"
+              className="lg:hidden p-2 rounded-full cursor-pointer transition-colors text-primary hover:bg-primary/5 outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -140,7 +142,8 @@ export const Navbar: React.FC = () => {
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-1.5 rounded-full hover:bg-white/10 transition-colors"
+                    className="p-1.5 rounded-full hover:bg-white/10 transition-colors outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    aria-label="Close Menu"
                   >
                     <X className="w-5 h-5 text-cream" />
                   </button>
@@ -155,7 +158,7 @@ export const Navbar: React.FC = () => {
                         key={link.name}
                         href={link.href}
                         onClick={() => setIsOpen(false)}
-                        className={`text-lg font-medium tracking-wide uppercase transition-colors py-1.5 border-b border-cream/5 ${
+                        className={`text-lg font-medium tracking-wide uppercase transition-colors py-1.5 border-b border-cream/5 rounded-md px-1.5 outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
                           isActive ? "text-accent font-bold" : "text-cream hover:text-accent-light"
                         }`}
                       >
@@ -170,7 +173,7 @@ export const Navbar: React.FC = () => {
               <div className="space-y-4 pt-6 border-t border-cream/15">
                 <a
                   href={BUSINESS_INFO.phoneCallUrl}
-                  className="flex items-center gap-3 p-3 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
                 >
                   <Phone className="w-5 h-5 text-accent-light animate-pulse" />
                   <div>
@@ -183,7 +186,7 @@ export const Navbar: React.FC = () => {
                   href={BUSINESS_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-2xl bg-whatsapp/10 hover:bg-whatsapp/20 transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-2xl bg-whatsapp/10 hover:bg-whatsapp/20 transition-colors outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
                 >
                   <MessageSquare className="w-5 h-5 text-whatsapp" />
                   <div>
@@ -196,7 +199,7 @@ export const Navbar: React.FC = () => {
                   href={BUSINESS_INFO.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-2xl bg-accent/10 hover:bg-accent/20 transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-2xl bg-accent/10 hover:bg-accent/20 transition-colors outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
                 >
                   <MapPin className="w-5 h-5 text-accent-light" />
                   <div>

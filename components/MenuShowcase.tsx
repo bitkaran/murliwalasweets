@@ -58,20 +58,20 @@ export const MenuShowcase: React.FC = () => {
                     setActiveTab(tab.value);
                     setSearchQuery(""); // Clear search on tab switch
                   }}
-                  className={`relative px-4 py-2.5 rounded-xl text-xs md:text-sm font-bold tracking-wide font-outfit transition-all duration-300 cursor-pointer outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent whitespace-nowrap ${
+                  className={`relative px-4 py-2.5 rounded-xl text-xs md:text-sm font-bold tracking-wide font-outfit transition-all duration-300 cursor-pointer outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream whitespace-nowrap border z-0 ${
                     isActive
-                      ? "text-cream shadow-sm"
-                      : "text-charcoal hover:text-primary hover:bg-accent/15"
+                      ? "text-cream border-primary shadow-[0_8px_24px_rgba(191,4,3,0.18)]"
+                      : "text-charcoal border-transparent hover:bg-accent hover:text-charcoal hover:border-accent"
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="activeMenuTab"
-                      className="absolute inset-0 bg-primary rounded-xl -z-10"
+                      className="absolute inset-0 bg-primary rounded-xl z-0"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
-                  {tab.label}
+                  <span className="relative z-10">{tab.label}</span>
                 </button>
               );
             })}
@@ -86,13 +86,13 @@ export const MenuShowcase: React.FC = () => {
               placeholder={`Search in ${categories.find((c) => c.value === activeTab)?.label.split(" ")[0]}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-12 py-3 bg-ivory border border-accent/40 rounded-2xl text-charcoal placeholder-charcoal/40 text-sm focus:outline-none focus:ring-2 focus:ring-primary font-outfit shadow-sm"
+              className="w-full pl-11 pr-12 py-3 bg-ivory border border-accent/40 rounded-2xl text-charcoal placeholder-charcoal/40 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream font-outfit shadow-sm"
             />
             <Search className="absolute left-4 w-4 h-4 text-charcoal/40" />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="absolute right-4 text-charcoal/50 hover:text-primary text-xs font-bold font-outfit"
+                className="absolute right-4 text-charcoal/50 hover:text-primary text-xs font-bold font-outfit px-1.5 py-0.5 rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Clear
               </button>
@@ -117,7 +117,7 @@ export const MenuShowcase: React.FC = () => {
                 <p className="text-charcoal/50 font-outfit text-sm sm:text-base">No items found matching your search query.</p>
                 <button
                   onClick={() => setSearchQuery("")}
-                  className="text-xs font-bold text-primary hover:underline font-outfit"
+                  className="text-xs font-bold text-primary hover:underline font-outfit px-2 py-1 rounded outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
                 >
                   Clear search query
                 </button>
@@ -194,7 +194,7 @@ export const MenuShowcase: React.FC = () => {
                         href={orderLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-xs font-bold text-primary hover:text-accent font-outfit transition-colors shrink-0"
+                        className="inline-flex items-center text-xs font-bold text-primary hover:text-accent font-outfit transition-colors shrink-0 rounded-md outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream px-1"
                       >
                         <MessageSquare className="w-3.5 h-3.5 mr-1 text-whatsapp animate-bounce" />
                         Order Now
