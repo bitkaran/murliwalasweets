@@ -49,7 +49,7 @@ export const WhatsAppFAB: React.FC = () => {
           <span className="absolute inset-0 rounded-full bg-whatsapp/50 animate-ping -z-10" />
           
           {/* <MessageSquare className="w-6 h-6 fill-white text-whatsapp" /> */}
-          <FaWhatsapp className="w-6 h-6 text-white" />
+          <FaWhatsapp className="w-7 h-7 text-white" />
           
           {/* Hover label */}
           <span className="absolute right-14 bg-primary-dark/95 backdrop-blur-sm text-cream text-xs font-semibold px-3 py-1.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg border border-accent/30 font-outfit">
