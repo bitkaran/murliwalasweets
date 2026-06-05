@@ -126,7 +126,7 @@ Please share details and availability.`;
           {/* Decorative Corner vector */}
           <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-bl-full pointer-events-none" />
 
-          <h3 style={{ color: "white !important" }} className="text-2xl md:text-3xl font-bold font-playfair text-white">
+          <h3 style={{ color: "#fee9e3 !important" }} className="text-2xl md:text-3xl font-bold font-playfair text-white">
             Let&apos;s Customize Your Order
           </h3>
           <p className="max-w-xl mx-auto text-sm md:text-base text-ivory/80 font-outfit">
