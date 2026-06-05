@@ -46,23 +46,15 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo Prominence */}
-            <a href="#home" className="flex items-center gap-3 group cursor-pointer">
-              <div className="relative overflow-hidden shrink-0">
-                <Image
-                  src="/images/murliwalasweetslogo.png"
-                  alt="Murliwala Sweets Logo"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              {/* <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-black tracking-wide font-playfair text-primary leading-tight">
-                  MURLIWALA
-                </span>
-                <span className="text-[10px] font-bold tracking-widest font-outfit uppercase text-accent -mt-0.5">
-                  Sweets & Snacks
-                </span>
-              </div> */}
+            <a href="#home" className="flex items-center group cursor-pointer">
+              <Image
+                src="/images/murliwalasweetslogo.png"
+                alt="Murliwala Sweets Logo"
+                width={160}
+                height={50}
+                className="w-36 md:w-44 h-auto shrink-0"
+                priority
+              />
             </a>
 
             {/* Desktop Navigation with Underline Animation */}
@@ -125,23 +117,15 @@ export const Navbar: React.FC = () => {
               <div>
                 {/* Header inside drawer */}
                 <div className="flex items-center justify-between pb-6 border-b border-cream/15">
-                  <div className="flex items-center gap-2">
-                    <div className="relative w-8 h-8 rounded-full overflow-hidden border border-accent/40 shrink-0">
-                      <Image
-                        src="/images/murliwala-logo.jpg"
-                        alt="Murliwala Sweets Logo"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-lg font-bold tracking-wide font-playfair text-cream">
-                        MURLIWALA
-                      </span>
-                      <span className="text-[9px] font-semibold tracking-widest font-outfit uppercase text-accent-light -mt-1">
-                        Sweets & Snacks
-                      </span>
-                    </div>
+                  <div className="flex items-center">
+                    <Image
+                      src="/images/murliwalasweetslogo.png"
+                      alt="Murliwala Sweets Logo"
+                      width={120}
+                      height={38}
+                      className="w-28 h-auto shrink-0"
+                      priority
+                    />
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}
