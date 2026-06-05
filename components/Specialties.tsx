@@ -7,6 +7,7 @@ import { MessageSquare, Star, Sparkles } from "lucide-react";
 import { MENU_ITEMS, createWhatsAppOrderLink } from "@/lib/data";
 import Card from "./ui/Card";
 import Button from "./ui/Button";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const Specialties: React.FC = () => {
   // Filter only special sweets
@@ -110,7 +111,7 @@ export const Specialties: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full text-xs font-semibold py-2.5"
-                      icon={<MessageSquare className="w-4 h-4" />}
+                      icon={<FaWhatsapp className="w-4 h-4" />}
                       iconPosition="left"
                     >
                       Order via WhatsApp

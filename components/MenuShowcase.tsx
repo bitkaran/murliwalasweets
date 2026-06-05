@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, Sparkles, Search } from "lucide-react";
 import { MENU_ITEMS, createWhatsAppOrderLink } from "@/lib/data";
+import { FaWhatsapp } from "react-icons/fa";
 
 type CategoryFilter = 'sweets' | 'snacks' | 'namkeen' | 'festive';
 
@@ -196,7 +197,7 @@ export const MenuShowcase: React.FC = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-xs font-bold text-primary hover:text-accent font-outfit transition-colors shrink-0 rounded-md outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream px-1"
                       >
-                        <MessageSquare className="w-3.5 h-3.5 mr-1 text-whatsapp animate-bounce" />
+                        <FaWhatsapp className="w-3.5 h-3.5 mr-1 text-whatsapp animate-bounce" />
                         Order Now
                       </a>
                     </div>

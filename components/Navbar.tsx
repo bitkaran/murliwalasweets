@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, MessageSquare, MapPin } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 import Button from "./ui/Button";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -188,7 +189,7 @@ export const Navbar: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-2xl bg-whatsapp/10 hover:bg-whatsapp/20 transition-colors outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
                 >
-                  <MessageSquare className="w-5 h-5 text-whatsapp" />
+                  <FaWhatsapp className="w-5 h-5 text-whatsapp" />
                   <div>
                     <p className="text-xs text-cream/60">Order on WhatsApp</p>
                     <p className="font-semibold text-sm text-whatsapp">Chat with Us</p>

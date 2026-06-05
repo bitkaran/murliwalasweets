@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Calendar, Gift, Truck, MessageSquare, Phone } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 import Button from "./ui/Button";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const BulkOrders: React.FC = () => {
   const bulkEnquiryText = `Namaste Murliwala Sweets,
@@ -141,7 +142,7 @@ Please share details and availability.`;
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto text-primary-dark"
-              icon={<MessageSquare className="w-5 h-5" />}
+              icon={<FaWhatsapp className="w-5 h-5" />}
               iconPosition="left"
             >
               Discuss on WhatsApp

@@ -7,6 +7,7 @@ import { Phone, MessageSquare, MapPin } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 import Button from "./ui/Button";
 import DecorativeDivider from "./ui/DecorativeDivider";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const Hero: React.FC = () => {
   return (
@@ -118,7 +119,7 @@ export const Hero: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto text-primary-dark"
-            icon={<MessageSquare className="w-5 h-5" />}
+            icon={<FaWhatsapp className="w-5 h-5" />}
             iconPosition="left"
           >
             Order on WhatsApp
