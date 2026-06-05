@@ -18,7 +18,7 @@ export const Gallery: React.FC = () => {
     { label: "Sweets", value: "sweets" },
     { label: "Snacks", value: "snacks" },
     { label: "Festive & Gifting", value: "festive" },
-    { label: "Shop Front", value: "shop" },
+    { label: "Shop", value: "shop" },
   ];
 
   const filteredItems = GALLERY_ITEMS.filter((item) => {
