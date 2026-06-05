@@ -146,7 +146,7 @@ export const Specialties: React.FC = () => {
           <Button
             variant="outline"
             size="sm"
-            href="#bulk-orders"
+            href="/bulk-orders"
             className="shrink-0 w-full md:w-auto text-cream border-cream/35 hover:bg-cream/10"
           >
             Learn More

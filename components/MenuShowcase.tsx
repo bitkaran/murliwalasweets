@@ -47,31 +47,34 @@ export const MenuShowcase: React.FC = () => {
         </div>
 
         {/* Categories Tab Navigation */}
-        <div className="flex justify-center mb-8">
-          <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-2xl bg-accent/10 border border-accent/25 max-w-full">
-            {categories.map((tab) => (
-              <button
-                key={tab.value}
-                onClick={() => {
-                  setActiveTab(tab.value);
-                  setSearchQuery(""); // Clear search on tab switch
-                }}
-                className={`relative px-4 py-2.5 rounded-xl text-xs md:text-sm font-bold tracking-wide font-outfit transition-all duration-300 cursor-pointer ${
-                  activeTab === tab.value
-                    ? "text-ivory shadow-sm"
-                    : "text-primary hover:text-primary-dark hover:bg-primary-dark/5"
-                }`}
-              >
-                {activeTab === tab.value && (
-                  <motion.div
-                    layoutId="activeMenuTab"
-                    className="absolute inset-0 bg-primary rounded-xl -z-10"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-                {tab.label}
-              </button>
-            ))}
+        <div className="flex justify-center mb-8 px-2">
+          <div className="flex overflow-x-auto md:overflow-visible items-center justify-start md:justify-center gap-2 p-1.5 rounded-2xl bg-accent/10 border border-accent/25 max-w-full scrollbar-none scroll-smooth">
+            {categories.map((tab) => {
+              const isActive = activeTab === tab.value;
+              return (
+                <button
+                  key={tab.value}
+                  onClick={() => {
+                    setActiveTab(tab.value);
+                    setSearchQuery(""); // Clear search on tab switch
+                  }}
+                  className={`relative px-4 py-2.5 rounded-xl text-xs md:text-sm font-bold tracking-wide font-outfit transition-all duration-300 cursor-pointer outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent whitespace-nowrap ${
+                    isActive
+                      ? "text-cream shadow-sm"
+                      : "text-charcoal hover:text-primary hover:bg-accent/15"
+                  }`}
+                >
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeMenuTab"
+                      className="absolute inset-0 bg-primary rounded-xl -z-10"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  {tab.label}
+                </button>
+              );
+            })}
           </div>
         </div>
 

@@ -43,7 +43,7 @@ Please share details and availability.`;
   return (
     <section
       id="bulk-orders"
-      className="relative py-20 md:py-28 bg-primary-dark text-ivory overflow-hidden border-t border-b border-accent/30"
+      className="relative py-20 md:py-28 bg-cream text-charcoal overflow-hidden border-t border-b border-accent/15"
     >
       {/* Decorative Traditional Border Patterns */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#f6ad56_1.2px,transparent_0)] bg-[size:24px_24px]" />
@@ -59,11 +59,11 @@ Please share details and availability.`;
           <span className="text-accent font-bold tracking-widest text-sm uppercase block font-outfit">
             Catering & Celebrations
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-playfair leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary font-playfair leading-tight">
             Celebrate with Bulk & Festive Orders
           </h2>
           <div className="w-20 h-1 bg-accent rounded-full mx-auto" />
-          <p className="text-ivory/80 font-outfit text-sm sm:text-base leading-relaxed">
+          <p className="text-charcoal/80 font-outfit text-sm sm:text-base leading-relaxed">
             Planning a celebration? We offer custom sweet boxes, festive gift hampers, and large catering menus. (Please confirm order lead times and availability with the shop owner).
           </p>
         </div>
@@ -98,16 +98,16 @@ Please share details and availability.`;
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-primary-dark/80 rounded-2xl p-6 border border-accent/30 flex gap-4 hover:border-accent transition-colors duration-300 shadow-md"
+                className="bg-ivory rounded-2xl p-6 border border-accent/30 flex gap-4 hover:border-accent hover:shadow-md transition-all duration-300"
               >
-                <div className="p-3 w-fit rounded-xl bg-white/5 border border-accent/25 text-accent shrink-0 h-fit">
+                <div className="p-3 w-fit rounded-xl bg-primary/5 border border-accent/25 text-primary shrink-0 h-fit">
                   {opt.icon}
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-lg font-bold font-playfair text-white">
+                  <h3 className="text-lg font-bold font-playfair text-primary-dark">
                     {opt.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-ivory/80 font-outfit leading-relaxed">
+                  <p className="text-xs sm:text-sm text-charcoal/80 font-outfit leading-relaxed">
                     {opt.desc}
                   </p>
                 </div>

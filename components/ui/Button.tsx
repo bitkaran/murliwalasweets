@@ -30,7 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   disabled,
 }) => {
-  const baseStyles = "inline-flex items-center justify-center font-semibold font-outfit rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-sm";
+  const baseStyles = "inline-flex items-center justify-center font-semibold font-outfit rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-sm gap-2 whitespace-nowrap";
   
   const variants = {
     primary: "bg-primary text-cream hover:bg-primary-dark border border-primary hover:border-primary-dark shadow-md",
@@ -41,16 +41,16 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const sizes = {
-    sm: "px-4 py-2 text-xs",
-    md: "px-6 py-3 text-sm md:text-base",
-    lg: "px-8 py-4 text-base md:text-lg",
+    sm: "px-3.5 py-1.5 text-[10px] sm:text-xs",
+    md: "px-5 py-2.5 text-xs sm:text-sm md:text-base",
+    lg: "px-6 py-3 text-xs sm:text-sm md:text-base lg:text-lg",
   };
 
   const content = (
     <>
-      {icon && iconPosition === "left" && <span className="mr-2 shrink-0">{icon}</span>}
-      <span>{children}</span>
-      {icon && iconPosition === "right" && <span className="ml-2 shrink-0">{icon}</span>}
+      {icon && iconPosition === "left" && <span className="shrink-0 inline-flex items-center justify-center">{icon}</span>}
+      <span className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap">{children}</span>
+      {icon && iconPosition === "right" && <span className="shrink-0 inline-flex items-center justify-center">{icon}</span>}
     </>
   );
 

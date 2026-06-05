@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-primary-dark"
+      className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-primary-dark"
     >
       {/* Background Image with Dark Maroon Overlay */}
       <div className="absolute inset-0 z-0">
@@ -21,10 +21,11 @@ export const Hero: React.FC = () => {
           alt="Murliwala Sweets Premium Mithai Spread"
           fill
           priority
-          className="object-cover object-center scale-100 filter brightness-[0.35] contrast-[1.05]"
+          className="object-cover object-[68%_center] md:object-center scale-100 filter brightness-[0.55] md:brightness-[0.35] contrast-[1.05]"
         />
-        {/* Soft Traditional Maroon Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-primary-dark/80" />
+        {/* Soft Traditional Maroon Gradient Overlay - Responsive Overlay */}
+        <div className="absolute inset-0 bg-primary-dark/45 md:bg-primary-dark/70 z-1" />
+        <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-black/30 z-2" />
       </div>
 
       {/* Subtle Floating Decorative Elements */}
