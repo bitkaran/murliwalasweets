@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Phone, MapPin, Clock, Navigation, CheckCircle2 } from "lucide-react";
+import { Phone, MapPin, Clock, Navigation, CheckCircle2, MessageSquare } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 import Button from "./ui/Button";
 
@@ -111,13 +111,13 @@ export const LocationContact: React.FC = () => {
 
             {/* Quick CTAs Box */}
             <div className="space-y-4 pt-8 mt-8 border-t border-accent/20">
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Button
                   variant="gold"
                   href={BUSINESS_INFO.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 w-full text-primary-dark"
+                  className="w-full text-charcoal font-bold"
                   icon={<Navigation className="w-4 h-4" />}
                   iconPosition="left"
                 >
@@ -126,12 +126,25 @@ export const LocationContact: React.FC = () => {
                 <Button
                   variant="primary"
                   href={BUSINESS_INFO.phoneCallUrl}
-                  className="flex-1 w-full"
-                  icon={<Phone className="w-4 h-4 text-ivory" />}
+                  className="w-full"
+                  icon={<Phone className="w-4 h-4" />}
                   iconPosition="left"
                 >
                   Call: {BUSINESS_INFO.phoneDisplay}
                 </Button>
+                
+                {/* Specific WhatsApp contact CTA */}
+                <a
+                  href={`https://wa.me/919828357226?text=${encodeURIComponent(
+                    "Namaste Murliwala Sweets,\n\nI would like to contact you regarding sweets/snacks order.\n\nName:\nRequirement:\nDelivery / Pickup:\nPreferred Date/Time:\n\nPlease share details."
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="sm:col-span-2 inline-flex items-center justify-center font-semibold font-outfit rounded-full px-6 py-3 text-sm md:text-base bg-whatsapp hover:bg-whatsapp/90 text-white shadow-md hover:scale-103 active:scale-98 transition-all cursor-pointer"
+                >
+                  <MessageSquare className="w-4 h-4 mr-2" />
+                  Contact on WhatsApp
+                </a>
               </div>
             </div>
 

@@ -33,11 +33,11 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = "inline-flex items-center justify-center font-semibold font-outfit rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-sm";
   
   const variants = {
-    primary: "bg-primary text-ivory hover:bg-primary-dark border border-primary hover:border-primary-dark shadow-md",
-    secondary: "bg-cream text-charcoal border border-accent/40 hover:bg-accent/10 shadow-sm",
-    gold: "bg-accent text-primary-dark hover:bg-accent-light border border-accent shadow-md",
-    glass: "bg-ivory text-charcoal hover:bg-cream border border-accent/30 shadow-sm",
-    outline: "bg-transparent text-accent hover:bg-accent/10 border border-accent shadow-none",
+    primary: "bg-primary text-cream hover:bg-primary-dark border border-primary hover:border-primary-dark shadow-md",
+    secondary: "bg-cream text-charcoal border border-accent hover:bg-accent hover:text-charcoal transition-all shadow-sm",
+    gold: "bg-accent text-charcoal hover:bg-accent-light border border-accent shadow-md",
+    glass: "bg-cream/40 text-charcoal hover:bg-cream border border-accent/30 shadow-sm",
+    outline: "bg-transparent text-accent hover:bg-accent/10 hover:text-accent-light border border-accent shadow-none",
   };
 
   const sizes = {

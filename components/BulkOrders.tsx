@@ -8,6 +8,20 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Button from "./ui/Button";
 
 export const BulkOrders: React.FC = () => {
+  const bulkEnquiryText = `Namaste Murliwala Sweets,
+
+I would like to enquire about bulk/festive order.
+
+Occasion:
+Approx Quantity:
+Preferred Date:
+Delivery / Pickup:
+Customer Name:
+
+Please share details and availability.`;
+
+  const bulkOrderWhatsAppUrl = `https://wa.me/919828357226?text=${encodeURIComponent(bulkEnquiryText)}`;
+
   const options = [
     {
       icon: <Gift className="w-6 h-6 text-accent" />,
@@ -32,7 +46,7 @@ export const BulkOrders: React.FC = () => {
       className="relative py-20 md:py-28 bg-primary-dark text-ivory overflow-hidden border-t border-b border-accent/30"
     >
       {/* Decorative Traditional Border Patterns */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#D4A548_1.2px,transparent_0)] bg-[size:24px_24px]" />
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#f6ad56_1.2px,transparent_0)] bg-[size:24px_24px]" />
       
       {/* Subtle traditional gold stars/mandala outline */}
       <div className="absolute top-[10%] left-[5%] w-72 h-72 rounded-full bg-accent/5 filter blur-3xl" />
@@ -123,7 +137,7 @@ export const BulkOrders: React.FC = () => {
             <Button
               variant="gold"
               size="md"
-              href="https://wa.me/919828357226?text=Hello%20Murliwala%20Sweets%2C%20I%20am%20interested%20in%20custom%20bulk%2Ffestive%20packaging%20for%20an%20event.%20Please%20guide%20me."
+              href={bulkOrderWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto text-primary-dark"

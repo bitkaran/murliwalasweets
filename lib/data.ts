@@ -42,7 +42,7 @@ export const BUSINESS_INFO = {
   whatsappUrl: "https://wa.me/919828357226",
   phoneCallUrl: "tel:+919828357226",
   mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=28.1249054,75.4048634",
-  mapsEmbedIframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.727690620959!2d75.4026747113887!3d28.124905375830948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39133bd57606cb7b%3A0xe5c50ffbb62dfc9!2sMurliwala%20Sweets!5e0!3m2!1sen!2sin!4v1717546000000!5m2!1sen!2sin", // Calibrated Google Maps embed
+  mapsEmbedIframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.708723715179!2d75.4022884755243!3d28.124905375945826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391339aa07c8f87b%3A0xd76743a659f89e2d!2sMurliwala%20Sweets!5e0!3m2!1sen!2sin!4v1780640407317!5m2!1sen!2sin",
   address: "Near Satyam Residency, Opposite Kamal Heights, Axis Bank ke samne wali gali, Fauz Ka Mohalla, Jhunjhunu – 333001, Rajasthan",
   landmarks: {
     near: "Satyam Residency",

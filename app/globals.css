@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #A30D12;
-  --color-primary-dark: #6D0D12;
-  --color-accent: #D4A548;
-  --color-accent-light: #E0A12B;
-  --color-cream: #F8F1E7;
-  --color-cream-dark: #EADCC8;
-  --color-charcoal: #3B2418;
-  --color-ivory: #FFF9F0;
+  --color-primary: #bf0403;
+  --color-primary-dark: #880e0e;
+  --color-accent: #f6ad56;
+  --color-accent-light: #f07f46;
+  --color-cream: #fee9e3;
+  --color-cream-dark: #d38e8a;
+  --color-charcoal: #6d2624;
+  --color-ivory: #fee9e3;
   --color-whatsapp: #25D366;
+  --color-muted-rose: #c75858;
+  --color-dusty-rose: #d38e8a;
   
   --font-playfair: var(--font-playfair), serif;
   --font-outfit: var(--font-outfit), sans-serif;
@@ -37,15 +39,15 @@
 }
 
 body {
-  background-color: #F8F1E7; /* Cream Background */
-  color: #3B2418; /* Dark Brown Text */
+  background-color: #fee9e3; /* Light Cream */
+  color: #6d2624; /* Chocolate Maroon */
   font-family: var(--font-outfit);
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair);
-  color: #3B2418;
+  color: #880e0e; /* Deep Red */
 }
 
 /* Custom Scrollbar to match Brand Colors */
@@ -53,45 +55,44 @@ h1, h2, h3, h4, h5, h6 {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8F1E7;
+  background: #fee9e3;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D4A548;
+  background: #f6ad56;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #A30D12;
+  background: #bf0403;
 }
 
 /* Elegant borders and traditional surface styles */
 .border-gold {
-  border-color: #D4A548;
+  border-color: #f6ad56;
 }
 
 .bg-maroon-surface {
-  background-color: #6D0D12;
+  background-color: #6d2624;
 }
 
 .bg-cream-surface {
-  background-color: #FFF9F0; /* Accent Ivory */
+  background-color: #fee9e3;
 }
 
 /* Indian Festive Mandana/Rangoli Background Pattern (subtle opacity) */
 .festive-bg-pattern {
-  background-image: radial-gradient(#D4A548 1.2px, transparent 0);
+  background-image: radial-gradient(#f6ad56 1.2px, transparent 0);
   background-size: 32px 32px;
-  background-color: #F8F1E7;
+  background-color: #fee9e3;
 }
 
 .gold-gradient-text {
-  color: #D4A548;
+  color: #f6ad56;
 }
 
 .gold-gradient-bg {
-  background-color: #D4A548;
+  background-color: #f6ad56;
 }
 
 .crimson-gradient-bg {
-  background-color: #A30D12;
+  background-color: #bf0403;
 }
-

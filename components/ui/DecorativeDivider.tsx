@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 interface DecorativeDividerProps {
   className?: string;
-  color?: string; // e.g. "#D4A548"
+  color?: string; // e.g. "#f6ad56"
 }
 
 export const DecorativeDivider: React.FC<DecorativeDividerProps> = ({
   className = "",
-  color = "#D4A548",
+  color = "#f6ad56",
 }) => {
   return (
     <div className={`flex items-center justify-center gap-4 py-6 ${className}`}>
@@ -33,7 +33,7 @@ export const DecorativeDivider: React.FC<DecorativeDividerProps> = ({
         {/* Diamond Center */}
         <rect x="20" y="8" width="8" height="8" rx="1" transform="rotate(45 24 12)" fill={color} />
         {/* Inner small dot */}
-        <circle cx="24" cy="12" r="1.5" fill="#FFF9F0" />
+        <circle cx="24" cy="12" r="1.5" fill="#fee9e3" />
         
         {/* Left wings */}
         <path d="M12 12C15.5 12 17 8 18 12C17 16 15.5 12 12 12Z" fill={color} opacity="0.8" />

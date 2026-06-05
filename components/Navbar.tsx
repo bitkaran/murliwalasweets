@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, MessageSquare, MapPin } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
@@ -10,6 +12,7 @@ import Button from "./ui/Button";
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,13 +28,12 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Our Story", href: "#about" },
-    { name: "Specialties", href: "#specialties" },
-    { name: "Menu", href: "#menu" },
-    { name: "Bulk Orders", href: "#bulk-orders" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Visit Us", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Our Story", href: "/about" },
+    { name: "Menu", href: "/menu" },
+    { name: "Bulk Orders", href: "/bulk-orders" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Visit Us", href: "/contact" },
   ];
 
   return (
@@ -46,7 +48,7 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo Prominence */}
-            <a href="#home" className="flex items-center group cursor-pointer">
+            <Link href="/" className="flex items-center group cursor-pointer">
               <Image
                 src="/images/brand/murliwalasweetslogo.png"
                 alt="Murliwala Sweets Logo"
@@ -55,20 +57,29 @@ export const Navbar: React.FC = () => {
                 className="w-36 md:w-44 h-auto shrink-0"
                 priority
               />
-            </a>
+            </Link>
 
             {/* Desktop Navigation with Underline Animation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-xs font-bold tracking-widest uppercase text-charcoal hover:text-primary transition-colors duration-200 relative py-2 group font-outfit"
-                >
-                  {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full" />
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`text-xs font-bold tracking-widest uppercase transition-colors duration-200 relative py-2 group font-outfit ${
+                      isActive ? "text-primary animate-pulse" : "text-charcoal hover:text-primary"
+                    }`}
+                  >
+                    {link.name}
+                    <span
+                      className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 ${
+                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* Call Now Action Button */}
@@ -123,7 +134,7 @@ export const Navbar: React.FC = () => {
                       alt="Murliwala Sweets Logo"
                       width={120}
                       height={38}
-                      className="w-28 h-auto shrink-0"
+                      className="w-28 h-auto shrink-0 filter brightness-110"
                       priority
                     />
                   </div>
@@ -137,16 +148,21 @@ export const Navbar: React.FC = () => {
 
                 {/* Navigation Links list */}
                 <nav className="flex flex-col space-y-4 py-8">
-                  {navLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className="text-lg font-medium tracking-wide uppercase hover:text-accent-light transition-colors py-1.5 border-b border-cream/5"
-                    >
-                      {link.name}
-                    </a>
-                  ))}
+                  {navLinks.map((link) => {
+                    const isActive = pathname === link.href;
+                    return (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        onClick={() => setIsOpen(false)}
+                        className={`text-lg font-medium tracking-wide uppercase transition-colors py-1.5 border-b border-cream/5 ${
+                          isActive ? "text-accent font-bold" : "text-cream hover:text-accent-light"
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    );
+                  })}
                 </nav>
               </div>
 
@@ -198,4 +214,5 @@ export const Navbar: React.FC = () => {
     </>
   );
 };
+
 export default Navbar;

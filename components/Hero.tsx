@@ -87,7 +87,7 @@ export const Hero: React.FC = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <DecorativeDivider color="#D4A548" className="py-2" />
+          <DecorativeDivider color="#f6ad56" className="py-2" />
         </motion.div>
 
         {/* Tagline / Subtitle */}

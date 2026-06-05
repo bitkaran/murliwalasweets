@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Outfit } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppFAB from "@/components/WhatsAppFAB";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -110,7 +113,12 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-cream text-charcoal font-sans antialiased min-h-screen flex flex-col">
-        {children}
+        <Navbar />
+        <main className="flex-grow pt-20">
+          {children}
+        </main>
+        <Footer />
+        <WhatsAppFAB />
       </body>
     </html>
   );
