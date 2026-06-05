@@ -40,7 +40,7 @@ export const Hero: React.FC = () => {
           className="absolute top-[25%] left-[12%] text-accent/30 opacity-40"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/>
+            <path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" />
           </svg>
         </motion.div>
         {/* Gold Star Motif 2 */}
@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
           className="absolute bottom-[28%] right-[15%] text-accent/20 opacity-30"
         >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/>
+            <path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" />
           </svg>
         </motion.div>
       </div>
@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none mb-2 font-playfair drop-shadow-[0_2px_8px_rgba(109,38,36,0.9)]"
           >
-            <span className="text-primary" style={{ color: "#fee9e3 !important" }}>Murliwala</span> <span className="text-accent">Sweets</span>
+            <span className="text-primary">Murliwala</span> <span className="text-accent">Sweets</span>
           </motion.h1>
 
           {/* Gold Decorative Separator */}
