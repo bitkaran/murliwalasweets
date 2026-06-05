@@ -42,7 +42,7 @@ export default function MenuPage() {
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full bg-whatsapp text-cream font-bold text-xs shadow-sm hover:scale-105 active:scale-95 transition-transform"
           >
-            <FaWhatsapp className="w-4 h-4 fill-white/10" />
+            <FaWhatsapp className="w-4 h-4 fill-white" />
             Chat Now
           </a>
         </div>

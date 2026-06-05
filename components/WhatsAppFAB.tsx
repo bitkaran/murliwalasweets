@@ -42,7 +42,7 @@ export const WhatsAppFAB: React.FC = () => {
           href={BUSINESS_INFO.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-whatsapp text-white shadow-xl hover:brightness-110 transition-all duration-300 group flex items-center justify-center cursor-pointer outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
+          className="fixed bottom-25 right-6 z-50 p-4 rounded-full bg-whatsapp text-white shadow-xl hover:brightness-110 transition-all duration-300 group flex items-center justify-center cursor-pointer outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
           aria-label="Order on WhatsApp"
         >
           {/* Pulsing ring background */}
