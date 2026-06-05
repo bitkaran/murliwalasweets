@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MessageSquare, Star, Sparkles } from "lucide-react";
+import { Star, Sparkles } from "lucide-react";
 import { MENU_ITEMS, createWhatsAppOrderLink } from "@/lib/data";
 import Card from "./ui/Card";
 import Button from "./ui/Button";

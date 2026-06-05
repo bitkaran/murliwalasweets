@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, MessageSquare, MapPin } from "lucide-react";
+import { Menu, X, Phone, MapPin } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 import Button from "./ui/Button";
 import { FaWhatsapp } from "react-icons/fa";

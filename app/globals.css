@@ -38,11 +38,18 @@
   animation: float 6s ease-in-out infinite;
 }
 
-body {
-  background-color: #fee9e3; /* Light Cream */
-  color: #6d2624; /* Chocolate Maroon */
-  font-family: var(--font-outfit);
-  overflow-x: hidden;
+@layer base {
+  body {
+    background-color: #fee9e3; /* Light Cream */
+    color: #6d2624; /* Chocolate Maroon */
+    font-family: var(--font-outfit);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+    color: #880e0e; /* Deep Red */
+  }
 }
 
 /* Global focus outlines override */
@@ -51,11 +58,6 @@ body {
 }
 *:focus-visible {
   outline: none !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair);
-  color: #880e0e; /* Deep Red */
 }
 
 /* Custom Scrollbar to match Brand Colors */

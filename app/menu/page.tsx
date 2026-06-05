@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import MenuShowcase from "@/components/MenuShowcase";
-import { MessageSquare, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 import PageBanner from "@/components/PageBanner";
 import { FaWhatsapp } from "react-icons/fa";

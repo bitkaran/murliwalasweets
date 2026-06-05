@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Phone, MapPin, Clock, Navigation, CheckCircle2, MessageSquare } from "lucide-react";
+import { Phone, MapPin, Clock, Navigation, CheckCircle2 } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 import Button from "./ui/Button";
 import { FaWhatsapp } from "react-icons/fa";

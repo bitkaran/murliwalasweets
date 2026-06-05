@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquare } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 import { FaWhatsapp } from "react-icons/fa";
 

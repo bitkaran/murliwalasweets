@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Phone, MessageSquare, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
 import Button from "./ui/Button";
 import DecorativeDivider from "./ui/DecorativeDivider";

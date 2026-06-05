@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquare, Sparkles, Search } from "lucide-react";
+import { Sparkles, Search } from "lucide-react";
 import { MENU_ITEMS, createWhatsAppOrderLink } from "@/lib/data";
 import { FaWhatsapp } from "react-icons/fa";
 
