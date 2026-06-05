@@ -48,7 +48,7 @@ export const Navbar: React.FC = () => {
             {/* Logo Prominence */}
             <a href="#home" className="flex items-center group cursor-pointer">
               <Image
-                src="/images/murliwalasweetslogo.png"
+                src="/images/brand/murliwalasweetslogo.png"
                 alt="Murliwala Sweets Logo"
                 width={160}
                 height={50}
@@ -119,7 +119,7 @@ export const Navbar: React.FC = () => {
                 <div className="flex items-center justify-between pb-6 border-b border-cream/15">
                   <div className="flex items-center">
                     <Image
-                      src="/images/murliwalasweetslogo.png"
+                      src="/images/brand/murliwalasweetslogo.png"
                       alt="Murliwala Sweets Logo"
                       width={120}
                       height={38}

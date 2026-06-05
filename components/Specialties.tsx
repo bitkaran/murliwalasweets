@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MessageSquare, Star, Sparkles } from "lucide-react";
-import { MENU_ITEMS } from "@/lib/data";
+import { MENU_ITEMS, createWhatsAppOrderLink } from "@/lib/data";
 import Card from "./ui/Card";
 import Button from "./ui/Button";
 
@@ -40,10 +40,7 @@ export const Specialties: React.FC = () => {
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {specialties.map((item) => {
-            const whatsappText = encodeURIComponent(
-              `Hello Murliwala Sweets, I would like to order "${item.name}" (${item.price || "custom qty"}). Please confirm availability.`
-            );
-            const itemOrderUrl = `https://wa.me/919828357226?text=${whatsappText}`;
+            const itemOrderUrl = createWhatsAppOrderLink(item);
 
             return (
               <Card
@@ -54,7 +51,7 @@ export const Specialties: React.FC = () => {
                 <div className="relative h-56 w-full overflow-hidden">
                   <Image
                     src={item.image}
-                    alt={item.name}
+                    alt={item.alt}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -92,9 +89,9 @@ export const Specialties: React.FC = () => {
                       <h3 className="text-lg md:text-xl font-bold text-primary font-playfair group-hover:text-accent transition-colors duration-200">
                         {item.name}
                       </h3>
-                      {item.price && (
+                      {item.priceLabel && (
                         <span className="font-bold text-xs sm:text-sm text-primary bg-accent/20 border border-accent/40 px-2 py-0.5 rounded-lg font-outfit shrink-0 whitespace-nowrap">
-                          {item.price}
+                          {item.priceLabel}
                         </span>
                       )}
                     </div>

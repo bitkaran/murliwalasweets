@@ -3,11 +3,16 @@
 export interface MenuItem {
   id: string;
   name: string;
+  slug: string;
   hindiName?: string;
   description: string;
-  price?: string; // e.g. "₹400 / kg" or "₹20 / pc" or "₹40 / plate"
+  price: number;
+  priceLabel: string;
   category: 'sweets' | 'snacks' | 'namkeen' | 'festive';
   image: string;
+  alt: string;
+  unit: string;
+  whatsappText: string;
   isSpecial?: boolean;
   isDesiGhee?: boolean;
 }
@@ -51,267 +56,371 @@ export const BUSINESS_INFO = {
   operatingHours: "07:00 AM - 10:00 PM (Everyday)"
 };
 
-// Image Strategy:
-// All images are high-quality, lightweight Unsplash photography representing classic sweets/snacks.
-// Real storefront or specific kitchen images can be uploaded directly to public/images/ and replaced.
+// WhatsApp order formatting function
+export function createWhatsAppOrderLink(product: { name: string; priceLabel: string }) {
+  const text = `Namaste Murliwala Sweets,
+
+I would like to order/enquire about:
+
+Product: ${product.name}
+Price: ${product.priceLabel}
+Quantity: ______
+
+Customer Name:
+Delivery / Pickup:
+Address:
+Preferred Time:
+
+Please confirm availability and final total.`;
+
+  return `https://wa.me/919828357226?text=${encodeURIComponent(text)}`;
+}
+
 export const MENU_ITEMS: MenuItem[] = [
   // --- SWEETS ---
   {
-    id: "sweet-rabdi",
-    name: "Classic Rabdi",
-    hindiName: "रबड़ी",
-    description: "Thick, creamy condensed milk dessert sweetened with cardamom and topped with saffron and chopped pistachios.",
-    price: "₹480 / kg",
+    id: "almond-laddu",
+    name: "Almond Laddu",
+    slug: "almond-laddu",
+    hindiName: "बादाम लड्डू",
+    description: "Nutritious and rich sweet balls packed with premium almonds and cooked in pure desi ghee.",
+    price: 440.00,
+    priceLabel: "₹440.00",
     category: "sweets",
-    image: "/images/signature-sweets-assortment.png",
-    isSpecial: true
-  },
-  {
-    id: "sweet-kesar-peda",
-    name: "Kesar Peda",
-    hindiName: "केसर पेड़ा",
-    description: "Rich, velvety sweet rounds prepared with fresh khoya, saffron, and cardamom. A local favourite.",
-    price: "₹440 / kg",
-    category: "sweets",
-    image: "/images/signature-sweets-assortment.png",
+    image: "/images/products/almond-laddu.png",
+    alt: "Almond Laddu by Murliwala Sweets Jhunjhunu",
+    unit: "per kg / as listed",
+    whatsappText: "Almond Laddu - ₹440.00",
     isSpecial: true,
     isDesiGhee: true
   },
   {
-    id: "sweet-chamcham",
-    name: "Bengali Chamcham",
-    hindiName: "चमचम",
-    description: "Traditional Bengali sweet made from fresh paneer, cooked in sugar syrup, and rolled in desiccated coconut.",
-    price: "₹380 / kg",
+    id: "moti-pakh",
+    name: "Moti Pakh",
+    slug: "moti-pakh",
+    hindiName: "मोती पाक",
+    description: "Traditional Rajasthani sweet made of chickpea flour, khoya, saffron, and cardamom, layered with silver foil.",
+    price: 460.00,
+    priceLabel: "₹460.00",
     category: "sweets",
-    image: "/images/signature-sweets-assortment.png",
-    isSpecial: false
-  },
-  {
-    id: "sweet-sandesh",
-    name: "Premium Sandesh",
-    hindiName: "सन्देश",
-    description: "Delicate, melt-in-mouth milk sweets originating from Bengal, flavored with cardamom, saffron, and pistachios.",
-    price: "₹460 / kg",
-    category: "sweets",
-    image: "/images/signature-sweets-assortment.png",
-    isSpecial: false
-  },
-  {
-    id: "sweet-malpua",
-    name: "Desi Ghee Malpua",
-    hindiName: "मालपुआ",
-    description: "Rich, golden fried pancakes soaked in saffron syrup, served warm with rabdi or nuts. Crispy edges, soft center.",
-    price: "₹360 / kg",
-    category: "sweets",
-    image: "/images/signature-sweets-assortment.png",
+    image: "/images/products/moti-pakh.png",
+    alt: "Moti Pakh by Murliwala Sweets Jhunjhunu",
+    unit: "per kg / as listed",
+    whatsappText: "Moti Pakh - ₹460.00",
     isSpecial: true,
     isDesiGhee: true
   },
   {
-    id: "sweet-imarti",
-    name: "Shahi Imarti",
-    hindiName: "इमरती",
-    description: "Circular flower-like sweet made of black gram batter, fried in pure desi ghee and soaked in warm sugar syrup.",
-    price: "₹340 / kg",
+    id: "nariyal-barfi",
+    name: "Nariyal Barfi",
+    slug: "nariyal-barfi",
+    hindiName: "नारियल बर्फी",
+    description: "Soft, rich milk barfi prepared with freshly grated coconut, milk, and sugar, flavored with cardamom.",
+    price: 500.00,
+    priceLabel: "₹500.00",
     category: "sweets",
-    image: "/images/signature-sweets-assortment.png",
+    image: "/images/products/nariyal-barfi.png",
+    alt: "Nariyal Barfi by Murliwala Sweets Jhunjhunu",
+    unit: "per kg / as listed",
+    whatsappText: "Nariyal Barfi - ₹500.00",
     isSpecial: false,
-    isDesiGhee: true
+    isDesiGhee: false
   },
   {
-    id: "sweet-jalebi",
-    name: "Kesar Jalebi",
-    hindiName: "केसर जलेबी",
-    description: "Crispy, hot, circular-coiled sweets fermented with local yogurt, fried and immersed in pure saffron syrup.",
-    price: "₹180 / kg",
+    id: "kaju-katli",
+    name: "Kaju Katli",
+    slug: "kaju-katli",
+    hindiName: "काजू कतली",
+    description: "Classic Indian diamond-shaped cashew fudge sweet, thin, smooth, and melt-in-the-mouth premium quality.",
+    price: 680.00,
+    priceLabel: "₹680.00",
     category: "sweets",
-    image: "/images/signature-sweets-assortment.png",
-    isSpecial: true
+    image: "/images/products/kaju-katli.png",
+    alt: "Kaju Katli by Murliwala Sweets",
+    unit: "per kg / as listed",
+    whatsappText: "Kaju Katli - ₹680.00",
+    isSpecial: true,
+    isDesiGhee: false
+  },
+  {
+    id: "gulab-jamun",
+    name: "Gulab Jamun",
+    slug: "gulab-jamun",
+    hindiName: "गुलाब जामुन",
+    description: "Soft, spongy milk-solid balls, deep fried and soaked in cardamon-flavored sugar syrup.",
+    price: 28.00,
+    priceLabel: "₹28.00",
+    category: "sweets",
+    image: "/images/products/gulab-jamun.png",
+    alt: "Gulab Jamun by Murliwala Sweets",
+    unit: "per piece / as listed",
+    whatsappText: "Gulab Jamun - ₹28.00",
+    isSpecial: true,
+    isDesiGhee: false
+  },
+  {
+    id: "rajbhog",
+    name: "Rajbhog",
+    slug: "rajbhog",
+    hindiName: "राजभोग",
+    description: "Large, spongy cottage cheese balls filled with saffron, dry fruits, and soaked in sweet syrup.",
+    price: 30.00,
+    priceLabel: "₹30.00",
+    category: "sweets",
+    image: "/images/products/rajbhog.png",
+    alt: "Rajbhog by Murliwala Sweets",
+    unit: "per piece / as listed",
+    whatsappText: "Rajbhog - ₹30.00",
+    isSpecial: false,
+    isDesiGhee: false
+  },
+  {
+    id: "rasgulla",
+    name: "Rasgulla",
+    slug: "rasgulla",
+    hindiName: "रसगुल्ला",
+    description: "Traditional spongy, juicy white dessert balls made of fresh paneer (chhena) cooked in light syrup.",
+    price: 22.00,
+    priceLabel: "₹22.00",
+    category: "sweets",
+    image: "/images/products/rasgulla.png",
+    alt: "Rasgulla by Murliwala Sweets Jhunjhunu",
+    unit: "per piece / as listed",
+    whatsappText: "Rasgulla - ₹22.00",
+    isSpecial: false,
+    isDesiGhee: false
+  },
+  {
+    id: "rasmalai",
+    name: "Rasmalai",
+    slug: "rasmalai",
+    hindiName: "रसमलाई",
+    description: "Soft, flattened paneer discs soaked in sweet, thickened milk flavored with cardamom, saffron, and pistachios.",
+    price: 50.00,
+    priceLabel: "₹50.00",
+    category: "sweets",
+    image: "/images/products/rasmalai.png",
+    alt: "Rasmalai by Murliwala Sweets Jhunjhunu",
+    unit: "per piece / as listed",
+    whatsappText: "Rasmalai - ₹50.00",
+    isSpecial: true,
+    isDesiGhee: false
+  },
+  {
+    id: "kalakand-barfi",
+    name: "Kalakand Barfi",
+    slug: "kalakand-barfi",
+    hindiName: "कलाकंद बर्फी",
+    description: "Rich, grainy, soft milk barfi made by reducing milk and sugar, garnished with chopped pistachios.",
+    price: 460.00,
+    priceLabel: "₹460.00",
+    category: "sweets",
+    image: "/images/products/kalakand-barfi.png",
+    alt: "Kalakand Barfi by Murliwala Sweets",
+    unit: "per kg / as listed",
+    whatsappText: "Kalakand Barfi - ₹460.00",
+    isSpecial: true,
+    isDesiGhee: false
   },
 
   // --- SNACKS (BREAKFAST & SNACKS) ---
   {
-    id: "snack-samosa",
-    name: "Special Masala Samosa",
+    id: "bread-kofta",
+    name: "Bread Kofta",
+    slug: "bread-kofta",
+    hindiName: "ब्रेड कोफ्ता",
+    description: "Crispy, golden-fried bread fritters stuffed with seasoned potato filling, coated in gram batter.",
+    price: 20.00,
+    priceLabel: "₹20.00",
+    category: "snacks",
+    image: "/images/products/bread-kofta.png",
+    alt: "Bread Kofta by Murliwala Sweets",
+    unit: "per piece / as listed",
+    whatsappText: "Bread Kofta - ₹20.00",
+    isSpecial: false,
+    isDesiGhee: false
+  },
+  {
+    id: "samosa",
+    name: "Samosa",
+    slug: "samosa",
     hindiName: "समोसा",
     description: "Flaky pastry pockets filled with perfectly spiced potatoes, green peas, and local Rajasthani whole spices.",
-    price: "₹15 / pc",
+    price: 20.00,
+    priceLabel: "₹20.00",
     category: "snacks",
-    image: "/images/snacks-kachori-jhaal-moodi.png",
-    isSpecial: true
+    image: "/images/products/samosa.png",
+    alt: "Samosa by Murliwala Sweets Jhunjhunu",
+    unit: "per piece / as listed",
+    whatsappText: "Samosa - ₹20.00",
+    isSpecial: true,
+    isDesiGhee: false
   },
   {
-    id: "snack-bread-kofta",
-    name: "Bread Kofta",
-    hindiName: "ब्रेड कोफ्ता",
-    description: "Crispy, deep-fried bread fritters stuffed with seasoned potato filling, coated in chickpea flour batter.",
-    price: "₹20 / pc",
+    id: "kadhi-kachori",
+    name: "Kadhi Kachori",
+    slug: "kadhi-kachori",
+    hindiName: "कढ़ी कचौरी",
+    description: "Crispy, flaky kachori filled with spiced lentils, served with warm, flavorful Rajasthani kadhi.",
+    price: 25.00,
+    priceLabel: "₹25.00",
     category: "snacks",
-    image: "/images/snacks-kachori-jhaal-moodi.png",
-    isSpecial: false
+    image: "/images/products/kadhi-kachori.png",
+    alt: "Kadhi Kachori special at Murliwala Sweets",
+    unit: "per plate / as listed",
+    whatsappText: "Kadhi Kachori - ₹25.00",
+    isSpecial: true,
+    isDesiGhee: false
   },
   {
-    id: "snack-dhokla",
-    name: "Khaman Dhokla",
+    id: "khaman-dhokla",
+    name: "Khaman dhokla",
+    slug: "khaman-dhokla",
     hindiName: "खमन ढोकला",
-    description: "Spongy, light, steamed chickpea flour cakes tempered with mustard seeds, curry leaves, and green chillies.",
-    price: "₹30 / plate",
+    description: "Light, spongy steamed chickpea flour cakes tempered with mustard seeds and curry leaves.",
+    price: 220.00,
+    priceLabel: "₹220.00",
     category: "snacks",
-    image: "/images/snacks-kachori-jhaal-moodi.png",
-    isSpecial: true
-  },
-  {
-    id: "snack-saag-rota",
-    name: "Rajasthani Saag Rota",
-    hindiName: "साग रोटा",
-    description: "A traditional rustic Rajasthani combination of hot green leafy saag served with thick, wood-fired bajra/wheat rota.",
-    price: "₹80 / plate",
-    category: "snacks",
-    image: "/images/snacks-kachori-jhaal-moodi.png",
-    isSpecial: true
-  },
-  {
-    id: "snack-gud-kachori",
-    name: "Gud Kachori",
-    hindiName: "गुड़ कचौरी",
-    description: "Unique sweet & savory flaky pastry filled with jaggery, crushed fennel, nuts, and select dessert spices.",
-    price: "₹25 / pc",
-    category: "snacks",
-    image: "/images/snacks-kachori-jhaal-moodi.png",
-    isSpecial: false
+    image: "/images/products/khaman-dhokla.png",
+    alt: "Khaman dhokla by Murliwala Sweets",
+    unit: "per kg / as listed",
+    whatsappText: "Khaman dhokla - ₹220.00",
+    isSpecial: true,
+    isDesiGhee: false
   },
 
   // --- NAMKEEN & FARSAN ---
   {
-    id: "namkeen-ghee-cookies",
-    name: "Desi Ghee Cookies",
-    hindiName: "देशी घी कुकीज",
-    description: "Crumbly, melt-in-mouth cardamon biscuits baked fresh daily using pure home-style desi ghee.",
-    price: "₹360 / kg",
+    id: "khakhra",
+    name: "Khakhra",
+    slug: "khakhra",
+    hindiName: "खाखरा",
+    description: "Thin, crispy roasted flatbread seasoned with mild spices. The ultimate light tea-time accompaniment.",
+    price: 85.00,
+    priceLabel: "₹85.00",
     category: "namkeen",
-    image: "/images/snacks-kachori-jhaal-moodi.png",
+    image: "/images/products/khakhra.png",
+    alt: "Khakhra by Murliwala Sweets",
+    unit: "per packet / as listed",
+    whatsappText: "Khakhra - ₹85.00",
     isSpecial: false,
-    isDesiGhee: true
+    isDesiGhee: false
   },
   {
-    id: "namkeen-farsan",
-    name: "Rajasthani Mix Namkeen",
-    hindiName: "मिक्स नमकीन",
-    description: "A crispy, spicy blend of gram flour sev, lentils, peanuts, and dry spices. Perfect for tea-time.",
-    price: "₹240 / kg",
+    id: "banana-chips",
+    name: "Banana Chips",
+    slug: "banana-chips",
+    hindiName: "केला चिप्स",
+    description: "Crispy, crunchy banana slices lightly salted and seasoned cleanly in premium oil.",
+    price: 80.00,
+    priceLabel: "₹80.00",
     category: "namkeen",
-    image: "/images/snacks-kachori-jhaal-moodi.png",
-    isSpecial: true
+    image: "/images/products/banana-chips.png",
+    alt: "Banana Chips by Murliwala Sweets",
+    unit: "per packet / as listed",
+    whatsappText: "Banana Chips - ₹80.00",
+    isSpecial: false,
+    isDesiGhee: false
   },
   {
-    id: "namkeen-matar-suhal",
-    name: "Matar Suhal",
-    hindiName: "मटर सुहाल",
-    description: "Crispy, layered savory crackers spiced with ajwain (carom seeds), best enjoyed with green chilli pickle.",
-    price: "₹200 / kg",
+    id: "daal-bujia",
+    name: "Daal Bujia",
+    slug: "daal-bujia",
+    hindiName: "दाल भुजिया",
+    description: "A spicy, crispy sev blend prepared using moths flour, gram flour, and signature local spices.",
+    price: 280.00,
+    priceLabel: "₹280.00",
     category: "namkeen",
-    image: "/images/snacks-kachori-jhaal-moodi.png",
-    isSpecial: false
-  },
-  {
-    id: "namkeen-khari",
-    name: "Butter Puff Khari",
-    hindiName: "खारी बिस्कुट",
-    description: "Light, airy, multi-layered puffed pastry biscuits, freshly baked to a golden crisp. Tea's perfect companion.",
-    price: "₹180 / kg",
-    category: "namkeen",
-    image: "/images/snacks-kachori-jhaal-moodi.png",
-    isSpecial: false
+    image: "/images/products/daal-bujia.png",
+    alt: "Daal Bujia by Murliwala Sweets",
+    unit: "per kg / as listed",
+    whatsappText: "Daal Bujia - ₹280.00",
+    isSpecial: true,
+    isDesiGhee: false
   },
 
   // --- FESTIVE SPECIALS ---
   {
-    id: "festive-gujiya",
-    name: "Kesar Gujiya",
-    hindiName: "केसर गुजिया",
-    description: "Crispy pastry pockets loaded with rich sweetened khoya, dry fruits, saffron, and deep fried in pure ghee.",
-    price: "₹460 / kg",
+    id: "gujiya",
+    name: "Gujiya",
+    slug: "gujiya",
+    hindiName: "गुजया",
+    description: "Crispy fried sweet pastry loaded with sweetened khoya, dry fruits, and aromatic saffron.",
+    price: 600.00,
+    priceLabel: "₹600.00",
     category: "festive",
-    image: "/images/signature-sweets-assortment.png",
+    image: "/images/products/gujiya.png",
+    alt: "Gujiya by Murliwala Sweets Jhunjhunu",
+    unit: "per kg / as listed",
+    whatsappText: "Gujiya - ₹600.00",
     isSpecial: true,
     isDesiGhee: true
-  },
-  {
-    id: "festive-assorted",
-    name: "Premium Gift Sweets Box",
-    hindiName: "त्योहारी उपहार बॉक्स",
-    description: "Customisable luxury sweets box featuring Kesar Peda, Sandesh, Chamcham, and dry-fruit loaded bites.",
-    price: "₹650 onwards",
-    category: "festive",
-    image: "/images/festive-gift-box-assortment.png",
-    isSpecial: true
   }
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "gal-1",
-    title: "Golden Swamani Prasad Box",
-    category: "festive",
-    image: "/images/gallery-custom-swamani-box.jpg",
-    alt: "Custom Swamani box sweet packaging from Murliwala Sweets"
+    title: "Murliwala Signature Sweets Showcase",
+    category: "sweets",
+    image: "/images/gallery/signature-sweets-section.png",
+    alt: "Signature sweets display at Murliwala Sweets Jhunjhunu"
   },
   {
     id: "gal-2",
-    title: "Pure Desi Ghee Besan Laddu",
-    category: "sweets",
-    image: "/images/gallery-besan-laddu-poster.jpg",
-    alt: "Premium Besan Laddu made in pure Desi Ghee"
+    title: "Hot Savory Snacks Counter",
+    category: "snacks",
+    image: "/images/gallery/snacks-section.png",
+    alt: "Hot kachori and snacks counter at Murliwala Sweets"
   },
   {
     id: "gal-3",
-    title: "Crispy Rajasthani Gud Kachori",
-    category: "snacks",
-    image: "/images/gallery-gud-kachori-poster.jpg",
-    alt: "Sweet & savory Gud Kachori poster"
+    title: "Premium Gifting Platters",
+    category: "festive",
+    image: "/images/gallery/bulk-orders-section.png",
+    alt: "Corporate and wedding gifting sweets display box"
   },
   {
     id: "gal-4",
-    title: "Hot Kadi Kachori Serving",
-    category: "snacks",
-    image: "/images/gallery-kadi-kachori-poster.jpg",
-    alt: "Rajasthani Kadi Kachori poster"
+    title: "Traditional Festive Hampers",
+    category: "festive",
+    image: "/images/gallery/bulk-orders-section2.png",
+    alt: "Beautiful festive sweet box packs by Murliwala Sweets"
   },
   {
     id: "gal-5",
-    title: "Dilkhushal (Thal Barfi)",
-    category: "sweets",
-    image: "/images/gallery-dilkhushal-poster.jpg",
-    alt: "Traditional Rajasthani Dilkhushal sweet poster"
+    title: "Customer Service Desk",
+    category: "shop",
+    image: "/images/gallery/contact-section.png",
+    alt: "Customer counter service at Murliwala Sweets shop"
   },
   {
     id: "gal-6",
-    title: "Special Winter Til/Gud Chikki",
-    category: "sweets",
-    image: "/images/gallery-special-chikki-poster.jpg",
-    alt: "Crispy delicious Chikki poster"
+    title: "Sweets Shop Frontage",
+    category: "shop",
+    image: "/images/gallery/shop-front.png",
+    alt: "Shop front board of Murliwala Sweets Jhunjhunu"
   },
   {
     id: "gal-7",
-    title: "Murliwala Premium Sweets",
-    category: "festive",
-    image: "/images/gallery-sona-nahi-mithai-khrido.jpg",
-    alt: "Murliwala sweets brand poster"
+    title: "Clean Counter Display",
+    category: "shop",
+    image: "/images/gallery/gallery-shop-interior.png",
+    alt: "Clean and hygienic sweet trays display counter"
   },
   {
     id: "gal-8",
-    title: "Spicy Rajasthani Jhaal Moodi",
-    category: "snacks",
-    image: "/images/gallery-jhaal-moodi-poster.jpg",
-    alt: "Delicious crispy Jhaal Moodi poster"
+    title: "Signature Sweet Assortments",
+    category: "sweets",
+    image: "/images/gallery/signature-sweets-assortment.png",
+    alt: "Freshly prepared traditional sweet trays"
   },
   {
     id: "gal-9",
-    title: "Murliwala Store Front & Display",
-    category: "shop",
-    image: "/images/shop-front.png",
-    alt: "Murliwala Sweets counter display and shop interior"
+    title: "Rajasthani Farsan & Kachori",
+    category: "snacks",
+    image: "/images/gallery/snacks-kachori-jhaal-moodi.png",
+    alt: "Rajasthani savory kachoris and mix namkeens"
   }
 ];
 
@@ -321,21 +430,21 @@ export const TESTIMONIALS: Review[] = [
     id: "rev-1",
     name: "Yogesh Sharma",
     rating: 5,
-    comment: "The Kesar Peda here is unmatched in Jhunjhunu. It tastes authentic and is extremely fresh. Whenever we have a festival or function at home, Murliwala Sweets is our only choice.",
+    comment: "The Kaju Katli here is unmatched in Jhunjhunu. It tastes authentic and is extremely fresh. Whenever we have a festival or function at home, Murliwala Sweets is our only choice.",
     date: "May 2026"
   },
   {
     id: "rev-2",
     name: "Sunita Choudhary",
     rating: 5,
-    comment: "Their morning Samosa and Khaman Dhokla are fantastic. Cleanliness is very well-maintained, and the staff is extremely polite. High quality Desi Ghee sweets!",
+    comment: "Their morning Samosa and Khaman dhokla are fantastic. Cleanliness is very well-maintained, and the staff is extremely polite. High quality Desi Ghee sweets!",
     date: "April 2026"
   },
   {
     id: "rev-3",
     name: "Rajesh Saini",
     rating: 4.5,
-    comment: "Best Rabdi and Malpua in town. They are situated in the lane opposite Axis Bank in Fauz Ka Mohalla. Very easy to find and highly recommended for premium mithai.",
+    comment: "Best sweets in town. They are situated in the lane opposite Axis Bank in Fauz Ka Mohalla. Very easy to find and highly recommended for premium mithai.",
     date: "June 2026"
   }
 ];
@@ -343,7 +452,7 @@ export const TESTIMONIALS: Review[] = [
 export const FAQS = [
   {
     question: "Do you use Desi Ghee for your sweets?",
-    answer: "Many of our specialty items, including Kesar Peda, Malpua, and cookies, are prepared using Desi Ghee. (Please confirm ingredients and Desi Ghee preparations with the shop owner before ordering)."
+    answer: "Many of our specialty items, including Almond Laddu, Moti Pakh, and Gujiya, are prepared using Desi Ghee. (Please confirm ingredients and Desi Ghee preparations with the shop owner before ordering)."
   },
   {
     question: "Can I place bulk orders for weddings and events?",

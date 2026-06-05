@@ -48,7 +48,7 @@ export const About: React.FC = () => {
             {/* Primary Image */}
             <div className="relative h-[320px] sm:h-[450px] rounded-3xl overflow-hidden shadow-xl border border-accent/30">
               <Image
-                src="/images/about-premium-sweets-display.png"
+                src="/images/gallery/about-premium-sweets-display.png"
                 alt="Premium sweets display at Murliwala Sweets"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"

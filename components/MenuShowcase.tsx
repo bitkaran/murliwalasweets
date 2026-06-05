@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, Sparkles } from "lucide-react";
-import { MENU_ITEMS } from "@/lib/data";
+import { MENU_ITEMS, createWhatsAppOrderLink } from "@/lib/data";
 
 type CategoryFilter = 'sweets' | 'snacks' | 'namkeen' | 'festive';
 
@@ -71,10 +71,7 @@ export const MenuShowcase: React.FC = () => {
         >
           <AnimatePresence mode="popLayout">
             {filteredItems.map((item) => {
-              const whatsappMsg = encodeURIComponent(
-                `Hello Murliwala Sweets, I want to order "${item.name}" from your website. Price listed: ${item.price || "N/A"}. Please guide me on delivery/pickup.`
-              );
-              const orderLink = `https://wa.me/919828357226?text=${whatsappMsg}`;
+              const orderLink = createWhatsAppOrderLink(item);
 
               return (
                 <motion.div
@@ -116,9 +113,9 @@ export const MenuShowcase: React.FC = () => {
                             </p>
                           )}
                         </div>
-                        {item.price && (
+                        {item.priceLabel && (
                           <span className="text-xs font-bold text-primary bg-accent/20 border border-accent/40 px-2 py-0.5 rounded-lg font-outfit whitespace-nowrap">
-                            {item.price}
+                            {item.priceLabel}
                           </span>
                         )}
                       </div>

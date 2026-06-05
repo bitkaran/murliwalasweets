@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
       {/* Background Image with Dark Maroon Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-festive-sweets-spread.png"
+          src="/images/brand/hero-festive-sweets-spread.png"
           alt="Murliwala Sweets Premium Mithai Spread"
           fill
           priority

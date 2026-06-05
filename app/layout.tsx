@@ -60,7 +60,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "SweetShop",
     "name": "Murliwala Sweets",
-    "image": "https://murliwala-sweets.vercel.app/images/murliwala-logo.jpg",
+    "image": "https://murliwala-sweets.vercel.app/images/brand/murliwala-logo.jpg",
     "@id": "https://murliwala-sweets.vercel.app/#store",
     "url": "https://murliwala-sweets.vercel.app",
     "telephone": "+919828357226",

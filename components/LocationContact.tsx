@@ -148,7 +148,7 @@ export const LocationContact: React.FC = () => {
             {/* Shop Interior Image */}
             <div className="relative w-full h-[200px] sm:h-[260px] rounded-3xl overflow-hidden shadow-md border-2 border-accent/35 bg-primary">
               <Image
-                src="/images/gallery-shop-interior.png"
+                src="/images/gallery/gallery-shop-interior.png"
                 alt="Murliwala Sweets Shop Interior"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"

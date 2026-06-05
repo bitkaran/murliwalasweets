@@ -66,7 +66,7 @@ export const BulkOrders: React.FC = () => {
             <div className="absolute -inset-4 rounded-3xl border-2 border-accent/20 translate-x-2 translate-y-2 pointer-events-none" />
             <div className="relative h-[320px] sm:h-[400px] rounded-3xl overflow-hidden shadow-xl border-2 border-accent/40 bg-primary">
               <Image
-                src="/images/festive-gift-box-assortment.png"
+                src="/images/gallery/festive-gift-box-assortment.png"
                 alt="Murliwala Festive Gift Box Assortment"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
