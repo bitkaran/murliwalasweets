@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/data";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const WhatsAppFAB: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,7 +48,8 @@ export const WhatsAppFAB: React.FC = () => {
           {/* Pulsing ring background */}
           <span className="absolute inset-0 rounded-full bg-whatsapp/50 animate-ping -z-10" />
           
-          <MessageSquare className="w-6 h-6 fill-white text-whatsapp" />
+          {/* <MessageSquare className="w-6 h-6 fill-white text-whatsapp" /> */}
+          <FaWhatsapp className="w-6 h-6 text-white" />
           
           {/* Hover label */}
           <span className="absolute right-14 bg-primary-dark/95 backdrop-blur-sm text-cream text-xs font-semibold px-3 py-1.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg border border-accent/30 font-outfit">
