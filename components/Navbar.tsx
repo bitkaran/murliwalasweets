@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center justify-between">
             {/* Logo Prominence */}
             <a href="#home" className="flex items-center gap-3 group cursor-pointer">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-accent shadow-sm shrink-0">
+              <div className="relative overflow-hidden shrink-0">
                 <Image
                   src="/images/murliwalasweetslogo.png"
                   alt="Murliwala Sweets Logo"
