@@ -3,6 +3,7 @@ import { Playfair_Display, Outfit } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
+import { SEO_CONFIG } from "@/lib/seo";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -23,27 +24,27 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://murliwala-sweets.vercel.app"),
-  title: "Murliwala Sweets | Traditional Mithai, Fresh Snacks & Festive Gifting in Jhunjhunu",
-  description: "Experience the finest traditional Rajasthani sweets, Desi Ghee Mithai, and hot fresh snacks in Jhunjhunu. Murliwala Sweets offers Rabdi, Kesar Peda, Samosa, Dhokla, and custom corporate/festive orders. Located near Satyam Residency, Fauz Ka Mohalla. (Please confirm details with shop owner).",
-  keywords: [
-    "Murliwala Sweets",
-    "sweets in Jhunjhunu",
-    "export sweets Rajasthan",
-    "mithai shop in Jhunjhunu",
-    "snacks in Jhunjhunu",
-    "Rajasthani sweets",
-    "Desi Ghee sweets",
-    "Fauz Ka Mohalla sweet shop",
-    "Rabdi in Jhunjhunu",
-    "Kesar Peda",
-    "samosa",
-    "corporate gifting Jhunjhunu",
-    "wedding sweets",
-    "Rajasthan sweet shop"
-  ],
-  authors: [{ name: "Murliwala Sweets" }],
-  robots: "index, follow",
+  metadataBase: new URL(SEO_CONFIG.siteUrl),
+  title: {
+    default: SEO_CONFIG.defaultTitle,
+    template: `%s | ${SEO_CONFIG.siteName}`
+  },
+  description: SEO_CONFIG.defaultDescription,
+  keywords: SEO_CONFIG.defaultKeywords,
+  authors: [{ name: SEO_CONFIG.siteName }],
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/images/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -61,16 +62,16 @@ export const metadata: Metadata = {
     ]
   },
   openGraph: {
-    title: "Murliwala Sweets | Premium Mithai & Snacks in Jhunjhunu",
-    description: "Handcrafted traditional Indian sweets, fresh daily snacks, and custom festive gifting. Loved by families across Jhunjhunu, Rajasthan.",
-    url: "https://murliwala-sweets.vercel.app",
-    siteName: "Murliwala Sweets",
+    title: SEO_CONFIG.defaultTitle,
+    description: SEO_CONFIG.defaultDescription,
+    url: SEO_CONFIG.siteUrl,
+    siteName: SEO_CONFIG.siteName,
     images: [
       {
-        url: "/images/gallery/about-premium-sweets-display.png",
+        url: SEO_CONFIG.defaultOgImage,
         width: 1200,
         height: 630,
-        alt: "Murliwala Sweets Premium Mithai Counter"
+        alt: `${SEO_CONFIG.siteName} Premium Mithai & Snacks`
       }
     ],
     locale: "en_IN",
@@ -78,9 +79,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Murliwala Sweets | Premium Mithai & Snacks in Jhunjhunu",
-    description: "Handcrafted traditional Indian sweets, fresh daily snacks, and custom festive gifting. Loved by families across Jhunjhunu, Rajasthan.",
-    images: ["/images/gallery/about-premium-sweets-display.png"],
+    title: SEO_CONFIG.defaultTitle,
+    description: SEO_CONFIG.defaultDescription,
+    images: [SEO_CONFIG.defaultOgImage],
   },
 };
 
@@ -89,46 +90,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Local Business JSON-LD Schema
-  const jsonLd = {
+  // WebSite JSON-LD Schema
+  const websiteSchema = {
     "@context": "https://schema.org",
-    "@type": "SweetShop",
-    "name": "Murliwala Sweets",
-    "image": "https://murliwala-sweets.vercel.app/images/brand/murliwala-logo.jpg",
-    "@id": "https://murliwala-sweets.vercel.app/#store",
-    "url": "https://murliwala-sweets.vercel.app",
-    "telephone": "+919828357226",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Near Satyam Residency, Opposite Kamal Heights, Axis Bank ke samne wali gali, Fauz Ka Mohalla",
-      "addressLocality": "Jhunjhunu",
-      "addressRegion": "Rajasthan",
-      "postalCode": "333001",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 28.1249054,
-      "longitude": 75.4048634
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "07:00",
-      "closes": "22:00"
-    },
+    "@type": "WebSite",
+    "name": SEO_CONFIG.siteName,
+    "url": SEO_CONFIG.siteUrl,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${SEO_CONFIG.siteUrl}/menu?search={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // Organization JSON-LD Schema
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": SEO_CONFIG.siteName,
+    "url": SEO_CONFIG.siteUrl,
+    "logo": SEO_CONFIG.logoUrl,
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+919828357226",
+      "telephone": SEO_CONFIG.phoneRaw,
       "contactType": "customer service",
       "areaServed": "IN",
       "availableLanguage": ["Hindi", "English"]
@@ -140,7 +124,11 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body className="bg-cream text-charcoal font-sans antialiased min-h-screen flex flex-col">

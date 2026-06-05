@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/brand/hero-festive-sweets-spread.png"
-          alt="Murliwala Sweets Premium Mithai Spread"
+          alt="Murliwala Sweets Premium Mithai Spread in Jhunjhunu"
           fill
           priority
           className="object-cover object-[68%_center] md:object-center scale-100 filter brightness-[0.55] contrast-[1.05]"

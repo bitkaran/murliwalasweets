@@ -5,16 +5,22 @@ import BulkOrders from "@/components/BulkOrders";
 import Button from "@/components/ui/Button";
 import { Calendar, Gift, Star } from "lucide-react";
 import PageBanner from "@/components/PageBanner";
+import { SEO_CONFIG } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Murliwala Sweets Bulk & Festive Orders | Corporate & Wedding Gifting",
+  title: "Bulk & Festive Orders | Murliwala Sweets Jhunjhunu",
   description: "Enquire about bulk sweets packages, Swamani boxes, custom wedding trays, and corporate festive gifting hampers from Murliwala Sweets in Jhunjhunu.",
+  keywords: ["Bulk sweets Jhunjhunu", "Swamani sweet boxes", "wedding sweets packing", "corporate gifting sweet hampers"],
+  alternates: {
+    canonical: `${SEO_CONFIG.siteUrl}/bulk-orders`
+  },
   openGraph: {
-    title: "Murliwala Sweets Bulk & Festive Orders | Corporate & Wedding Gifting",
+    title: "Bulk & Festive Orders | Murliwala Sweets Jhunjhunu",
     description: "Enquire about bulk sweets packages, Swamani boxes, custom wedding trays, and corporate festive gifting hampers from Murliwala Sweets in Jhunjhunu.",
+    url: `${SEO_CONFIG.siteUrl}/bulk-orders`,
     images: [
       {
-        url: "/images/gallery/bulk-orders-section.png",
+        url: `${SEO_CONFIG.siteUrl}/images/gallery/bulk-orders-section.png`,
         width: 1200,
         height: 630,
         alt: "Murliwala Sweets Bulk & Festive Orders Gifting"
@@ -24,13 +30,32 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Murliwala Sweets Bulk & Festive Orders | Corporate & Wedding Gifting",
+    title: "Bulk & Festive Orders | Murliwala Sweets Jhunjhunu",
     description: "Enquire about bulk sweets packages, Swamani boxes, custom wedding trays, and corporate festive gifting hampers from Murliwala Sweets in Jhunjhunu.",
-    images: ["/images/gallery/bulk-orders-section.png"]
+    images: [`${SEO_CONFIG.siteUrl}/images/gallery/bulk-orders-section.png`]
   }
 };
 
 export default function BulkOrdersPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SEO_CONFIG.siteUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Bulk Orders",
+        "item": `${SEO_CONFIG.siteUrl}/bulk-orders`
+      }
+    ]
+  };
+
   const bulkEnquiryText = `Namaste Murliwala Sweets,
 
 I would like to enquire about bulk/festive order.
@@ -71,6 +96,10 @@ Please share details and availability.`;
 
   return (
     <div className="bg-cream min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Page Header/Banner */}
       <PageBanner
         eyebrow="Festivals & Celebrations"

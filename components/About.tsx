@@ -49,7 +49,7 @@ export const About: React.FC = () => {
             <div className="relative h-[320px] sm:h-[450px] rounded-3xl overflow-hidden shadow-xl border border-accent/30">
               <Image
                 src="/images/gallery/about-premium-sweets-display.png"
-                alt="Premium sweets display at Murliwala Sweets"
+                alt="Premium sweets display at Murliwala Sweets Jhunjhunu"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />

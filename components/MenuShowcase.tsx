@@ -143,7 +143,7 @@ export const MenuShowcase: React.FC = () => {
                       <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shrink-0 border border-accent/20">
                         <Image
                           src={item.image}
-                          alt={item.name}
+                          alt={item.alt || item.name}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />

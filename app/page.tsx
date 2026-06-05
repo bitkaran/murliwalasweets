@@ -1,14 +1,74 @@
 import React from "react";
+import { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { MENU_ITEMS, GALLERY_ITEMS, BUSINESS_INFO } from "@/lib/data";
 import { ArrowRight, Phone } from "lucide-react";
 import Card from "@/components/ui/Card";
+import { SEO_CONFIG } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: SEO_CONFIG.defaultTitle,
+  description: SEO_CONFIG.defaultDescription,
+  alternates: {
+    canonical: SEO_CONFIG.siteUrl,
+  },
+  openGraph: {
+    title: SEO_CONFIG.defaultTitle,
+    description: SEO_CONFIG.defaultDescription,
+    url: SEO_CONFIG.siteUrl,
+    images: [
+      {
+        url: SEO_CONFIG.defaultOgImage,
+        width: 1200,
+        height: 630,
+        alt: `${SEO_CONFIG.siteName} Home Page`
+      }
+    ],
+  },
+  twitter: {
+    title: SEO_CONFIG.defaultTitle,
+    description: SEO_CONFIG.defaultDescription,
+    images: [SEO_CONFIG.defaultOgImage],
+  }
+};
 
 export default function Home() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "SweetShop",
+    "name": SEO_CONFIG.businessName,
+    "image": SEO_CONFIG.logoUrl,
+    "@id": `${SEO_CONFIG.siteUrl}/#store`,
+    "url": SEO_CONFIG.siteUrl,
+    "telephone": SEO_CONFIG.phoneRaw,
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Near Satyam Residency, Opposite Kamal Heights, Axis Bank ke samne wali gali, Fauz Ka Mohalla",
+      "addressLocality": "Jhunjhunu",
+      "addressRegion": "Rajasthan",
+      "postalCode": "333001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": SEO_CONFIG.coordinates.latitude,
+      "longitude": SEO_CONFIG.coordinates.longitude
+    },
+    "hasMap": SEO_CONFIG.googleMapsUrl,
+    "sameAs": [
+      SEO_CONFIG.siteUrl
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <main className="flex-grow">
         {/* Section 1: Cinematic Hero */}
         <Hero />
@@ -23,7 +83,7 @@ export default function Home() {
                 <div className="relative h-[320px] rounded-3xl overflow-hidden shadow-xl border border-accent/30 bg-primary">
                   <Image
                     src="/images/gallery/about-premium-sweets-display.png"
-                    alt="Premium sweets display at Murliwala Sweets"
+                    alt="Premium sweets display at Murliwala Sweets Jhunjhunu"
                     fill
                     className="object-cover"
                   />

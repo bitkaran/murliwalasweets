@@ -2,19 +2,25 @@ import React from "react";
 import { Metadata } from "next";
 import MenuShowcase from "@/components/MenuShowcase";
 import { Phone } from "lucide-react";
-import { BUSINESS_INFO } from "@/lib/data";
+import { BUSINESS_INFO, MENU_ITEMS } from "@/lib/data";
 import PageBanner from "@/components/PageBanner";
 import { FaWhatsapp } from "react-icons/fa";
+import { SEO_CONFIG } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Murliwala Sweets Menu | Traditional Mithai & Crispy Snacks",
+  title: "Murliwala Sweets Menu | Mithai, Snacks, Kachori & Sweets in Jhunjhunu",
   description: "Browse our delicious menu of Desi Ghee sweets, hot breakfast Samosas, Bread Koftas, Dhokla, and snacks in Jhunjhunu. Order instantly on WhatsApp.",
+  keywords: ["Murliwala Sweets Menu", "mithai list Jhunjhunu", "Samosa price Jhunjhunu", "sweet prices Jhunjhunu", "desighee sweets"],
+  alternates: {
+    canonical: `${SEO_CONFIG.siteUrl}/menu`
+  },
   openGraph: {
-    title: "Murliwala Sweets Menu | Traditional Mithai & Crispy Snacks",
+    title: "Murliwala Sweets Menu | Mithai, Snacks, Kachori & Sweets in Jhunjhunu",
     description: "Browse our delicious menu of Desi Ghee sweets, hot breakfast Samosas, Bread Koftas, Dhokla, and snacks in Jhunjhunu. Order instantly on WhatsApp.",
+    url: `${SEO_CONFIG.siteUrl}/menu`,
     images: [
       {
-        url: "/images/gallery/signature-sweets-assortment.png",
+        url: `${SEO_CONFIG.siteUrl}/images/gallery/signature-sweets-assortment.png`,
         width: 1200,
         height: 630,
         alt: "Murliwala Sweets Menu Catalog"
@@ -24,15 +30,61 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Murliwala Sweets Menu | Traditional Mithai & Crispy Snacks",
+    title: "Murliwala Sweets Menu | Mithai, Snacks, Kachori & Sweets in Jhunjhunu",
     description: "Browse our delicious menu of Desi Ghee sweets, hot breakfast Samosas, Bread Koftas, Dhokla, and snacks in Jhunjhunu. Order instantly on WhatsApp.",
-    images: ["/images/gallery/signature-sweets-assortment.png"]
+    images: [`${SEO_CONFIG.siteUrl}/images/gallery/signature-sweets-assortment.png`]
   }
 };
 
 export default function MenuPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SEO_CONFIG.siteUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Menu",
+        "item": `${SEO_CONFIG.siteUrl}/menu`
+      }
+    ]
+  };
+
+  const menuSchema = {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": `${SEO_CONFIG.siteName} Menu`,
+    "description": "Explore our delicious catalog of Desi Ghee traditional sweets, milk pedas, kachori and spicy morning savouries.",
+    "url": `${SEO_CONFIG.siteUrl}/menu`,
+    "hasMenuItem": MENU_ITEMS.map((item) => ({
+      "@type": "MenuItem",
+      "name": item.name,
+      "description": item.description,
+      "image": `${SEO_CONFIG.siteUrl}${item.image}`,
+      "offers": {
+        "@type": "Offer",
+        "price": item.price,
+        "priceCurrency": "INR"
+      }
+    }))
+  };
+
   return (
     <div className="bg-cream min-h-screen pb-20 sm:pb-0">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(menuSchema) }}
+      />
       {/* Page Header/Banner */}
       <PageBanner
         eyebrow="Fresh Daily Preparation"

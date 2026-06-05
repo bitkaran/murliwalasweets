@@ -371,21 +371,21 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Hot Savory Snacks Counter",
     category: "snacks",
     image: "/images/gallery/snacks-section.png",
-    alt: "Hot kachori and snacks counter at Murliwala Sweets"
+    alt: "Hot kachori and snacks counter at Murliwala Sweets Jhunjhunu"
   },
   {
     id: "gal-3",
     title: "Premium Gifting Platters",
     category: "festive",
     image: "/images/gallery/bulk-orders-section.png",
-    alt: "Corporate and wedding gifting sweets display box"
+    alt: "Corporate and wedding gifting sweets display box by Murliwala Sweets Jhunjhunu"
   },
   {
     id: "gal-4",
     title: "Traditional Festive Hampers",
     category: "festive",
     image: "/images/gallery/bulk-orders-section2.png",
-    alt: "Beautiful festive sweet box packs by Murliwala Sweets"
+    alt: "Beautiful festive sweet box packs by Murliwala Sweets Jhunjhunu"
   },
   {
     id: "gal-5",
@@ -399,21 +399,21 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Clean Counter Display",
     category: "shop",
     image: "/images/gallery/gallery-shop-interior.png",
-    alt: "Clean and hygienic sweet trays display counter"
+    alt: "Clean and hygienic sweet trays display counter at Murliwala Sweets Jhunjhunu"
   },
   {
     id: "gal-7",
     title: "Signature Sweet Assortments",
     category: "sweets",
     image: "/images/gallery/signature-sweets-assortment.png",
-    alt: "Freshly prepared traditional sweet trays"
+    alt: "Freshly prepared traditional sweet trays by Murliwala Sweets Jhunjhunu"
   },
   {
     id: "gal-8",
     title: "Rajasthani Farsan & Kachori",
     category: "snacks",
     image: "/images/gallery/snacks-kachori-jhaal-moodi.png",
-    alt: "Rajasthani savory kachoris and mix namkeens"
+    alt: "Rajasthani savory kachoris and mix namkeens at Murliwala Sweets Jhunjhunu"
   }
 ];
 

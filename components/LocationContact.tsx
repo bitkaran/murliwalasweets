@@ -163,7 +163,7 @@ export const LocationContact: React.FC = () => {
             <div className="relative w-full h-[200px] sm:h-[260px] rounded-3xl overflow-hidden shadow-md border-2 border-accent/35 bg-primary">
               <Image
                 src="/images/gallery/gallery-shop-interior.png"
-                alt="Murliwala Sweets Shop Interior"
+                alt="Murliwala Sweets Shop Interior in Jhunjhunu"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
