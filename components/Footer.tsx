@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
           {/* Brand Box */}
           <div className="border-b border-white/10 md:border-none pb-4 md:pb-0 space-y-3">
             <div className="flex flex-col">
-              <span className="text-xl font-black tracking-wide font-playfair text-white">
+              <span className="text-xl font-black tracking-wide font-playfair text-cream">
                 MURLIWALA
               </span>
               <span className="text-[10px] font-semibold tracking-widest font-outfit uppercase text-accent-light -mt-1">

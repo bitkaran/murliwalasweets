@@ -27,7 +27,7 @@ export default function MenuPage() {
       <div className="fixed bottom-0 left-0 right-0 z-30 bg-primary-dark/95 border-t border-accent/30 p-3 flex sm:hidden items-center justify-between gap-3 shadow-lg">
         <div className="text-cream text-left pl-2 font-outfit">
           <p className="text-[10px] text-accent font-bold uppercase tracking-wider">Quick Support</p>
-          <p className="text-xs font-semibold text-white">Ask for Daily Specials</p>
+          <p className="text-xs font-semibold text-cream">Ask for Daily Specials</p>
         </div>
         <div className="flex gap-2 shrink-0">
           <a

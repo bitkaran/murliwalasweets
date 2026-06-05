@@ -119,7 +119,7 @@ export default function Home() {
             <span className="text-accent font-bold tracking-widest text-sm uppercase block font-outfit">
               Wedding & Festive Platters
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-playfair text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold font-playfair text-cream leading-tight">
               Swamani Offerings & Custom Sweets Gifting
             </h2>
             <p className="text-cream/80 max-w-xl mx-auto font-outfit text-sm sm:text-base leading-relaxed">
@@ -160,7 +160,7 @@ export default function Home() {
                     <span className="text-[9px] text-accent font-bold uppercase tracking-wider font-outfit">
                       {item.category}
                     </span>
-                    <h3 className="text-base font-bold text-white font-playfair mt-0.5">
+                    <h3 className="text-base font-bold text-cream font-playfair mt-0.5">
                       {item.title}
                     </h3>
                   </div>

@@ -136,7 +136,7 @@ export const Specialties: React.FC = () => {
               <Star className="w-6 h-6 fill-accent-light" />
             </div>
             <div>
-              <h4 className="font-black text-lg md:text-xl font-playfair text-white">
+              <h4 className="font-black text-lg md:text-xl font-playfair text-cream">
                 Festive sweets & Custom Platters
               </h4>
               <p className="text-xs sm:text-sm text-cream/70 font-outfit mt-0.5">

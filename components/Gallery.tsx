@@ -103,7 +103,7 @@ export const Gallery: React.FC = () => {
                     <span className="text-[10px] text-accent font-bold uppercase tracking-wider font-outfit">
                       {item.category}
                     </span>
-                    <h3 className="text-lg font-bold text-white font-playfair mt-0.5">
+                    <h3 className="text-lg font-bold text-cream font-playfair mt-0.5">
                       {item.title}
                     </h3>
                   </div>

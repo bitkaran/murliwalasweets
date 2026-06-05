@@ -22,7 +22,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
         <span className="text-accent font-bold tracking-widest text-xs uppercase block font-outfit">
           {eyebrow}
         </span>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-playfair text-white leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-playfair text-cream leading-tight">
           {title}
         </h1>
         <div className="w-16 h-1 bg-accent rounded-full mx-auto mt-2" />

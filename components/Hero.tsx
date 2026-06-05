@@ -82,7 +82,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none mb-2 font-playfair drop-shadow-[0_2px_8px_rgba(109,38,36,0.9)]"
           >
-            <span className="text-primary">Murliwala</span> <span className="text-accent">Sweets</span>
+            <span className="text-cream">Murliwala</span> <span className="text-accent">Sweets</span>
           </motion.h1>
 
           {/* Gold Decorative Separator */}
