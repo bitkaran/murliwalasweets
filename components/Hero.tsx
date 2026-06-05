@@ -8,6 +8,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Button from "./ui/Button";
 import DecorativeDivider from "./ui/DecorativeDivider";
 import { FaWhatsapp } from "react-icons/fa";
+import heroImage from "@/public/images/brand/hero-festive-sweets-spread.webp";
 
 export const Hero: React.FC = () => {
   return (
@@ -18,10 +19,11 @@ export const Hero: React.FC = () => {
       {/* Background Image with Dark Maroon Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/brand/hero-festive-sweets-spread.png"
+          src={heroImage}
           alt="Murliwala Sweets Premium Mithai Spread in Jhunjhunu"
           fill
           priority
+          placeholder="blur"
           className="object-cover object-[68%_center] md:object-center scale-100 filter brightness-[0.55] contrast-[1.05]"
         />
         {/* Soft Traditional Maroon Gradient Overlay - Layered Responsive Overlays */}
