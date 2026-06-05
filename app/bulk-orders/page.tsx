@@ -4,6 +4,7 @@ import Image from "next/image";
 import BulkOrders from "@/components/BulkOrders";
 import Button from "@/components/ui/Button";
 import { Calendar, Gift, Star } from "lucide-react";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "Murliwala Sweets Bulk & Festive Orders | Corporate & Wedding Gifting",
@@ -51,22 +52,12 @@ Please share details and availability.`;
 
   return (
     <div className="bg-cream min-h-screen">
-      {/* Page Hero */}
-      <section className="relative py-16 bg-cream text-charcoal text-center overflow-hidden border-b border-accent/20">
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#f6ad56_1.2px,transparent_0)] bg-[size:24px_24px]" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 space-y-3">
-          <span className="text-accent font-bold tracking-widest text-xs uppercase block font-outfit">
-            Festivals & Celebrations
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black font-playfair text-primary leading-tight">
-            Bulk & Festive Gifting
-          </h1>
-          <div className="w-20 h-1 bg-accent rounded-full mx-auto" />
-          <p className="text-charcoal/80 max-w-2xl mx-auto font-outfit text-sm sm:text-base">
-            Celebrate life&apos;s grandest moments with custom-tailored sweet boxes, Swamani boxes, and corporate hampers.
-          </p>
-        </div>
-      </section>
+      {/* Page Header/Banner */}
+      <PageBanner
+        eyebrow="Festivals & Celebrations"
+        title="Bulk & Festive Gifting"
+        description="Custom sweet boxes, festive hampers, and celebration orders for every occasion."
+      />
 
       {/* Main BulkOrders component */}
       <BulkOrders />

@@ -9,7 +9,7 @@ import Button from "./ui/Button";
 
 export const LocationContact: React.FC = () => {
   return (
-    <section id="contact" className="relative py-20 md:py-28 bg-cream-dark/20 overflow-hidden border-t border-accent/20">
+    <section id="contact" className="relative py-20 md:py-28 bg-cream festive-bg-pattern overflow-hidden border-t border-accent/20">
       {/* Decorative traditional motifs */}
       <div className="absolute top-[20%] right-[-10%] w-[350px] h-[350px] rounded-full bg-accent/5 filter blur-3xl" />
       <div className="absolute bottom-[20%] left-[-10%] w-[350px] h-[350px] rounded-full bg-primary/5 filter blur-3xl" />

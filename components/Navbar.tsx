@@ -69,7 +69,7 @@ export const Navbar: React.FC = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-xs font-bold tracking-widest uppercase transition-colors duration-200 relative py-2 px-1 group font-outfit rounded-md outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
+                    className={`text-xs font-bold tracking-widest uppercase transition-colors duration-200 relative py-2 px-1 group font-outfit rounded-md outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream ${
                       isActive ? "text-primary animate-pulse" : "text-charcoal hover:text-primary"
                     }`}
                   >
@@ -100,7 +100,7 @@ export const Navbar: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-full cursor-pointer transition-colors text-primary hover:bg-primary/5 outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="lg:hidden p-2 rounded-full cursor-pointer transition-colors text-primary hover:bg-primary/5 outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

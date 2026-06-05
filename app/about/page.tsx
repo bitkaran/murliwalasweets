@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import About from "@/components/About";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Button from "@/components/ui/Button";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "About Murliwala Sweets | Traditional Rajasthani Legacy",
@@ -12,22 +13,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="bg-cream min-h-screen">
-      {/* Premium Header/Hero for About Page */}
-      <section className="relative py-16 bg-primary-dark text-cream text-center overflow-hidden border-b border-accent/30">
-        <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[radial-gradient(#f6ad56_1.2px,transparent_0)] bg-[size:24px_24px]" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 space-y-3">
-          <span className="text-accent font-bold tracking-widest text-xs sm:text-sm uppercase block font-outfit">
-            Established Tradition
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black font-playfair text-white leading-tight">
-            Our Sweet Legacy
-          </h1>
-          <div className="w-20 h-1 bg-accent rounded-full mx-auto" />
-          <p className="text-cream/80 max-w-2xl mx-auto font-outfit text-sm sm:text-base">
-            Discover the story of passion, purity, and heritage that defines every single bite at Murliwala Sweets.
-          </p>
-        </div>
-      </section>
+      {/* Page Header/Banner */}
+      <PageBanner
+        eyebrow="Established Tradition"
+        title="Our Sweet Legacy"
+        description="Discover the story of passion, purity, and heritage that defines every single bite at Murliwala Sweets."
+      />
 
       {/* Main Full About Section Component */}
       <About />

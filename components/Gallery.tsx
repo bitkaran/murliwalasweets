@@ -50,7 +50,7 @@ export const Gallery: React.FC = () => {
             <button
               key={tab.value}
               onClick={() => setActiveFilter(tab.value)}
-              className={`px-4 py-2 rounded-full text-xs md:text-sm font-bold tracking-wide font-outfit transition-all duration-300 cursor-pointer border ${
+              className={`px-4 py-2 rounded-full text-xs md:text-sm font-bold tracking-wide font-outfit transition-all duration-300 cursor-pointer border outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream ${
                 activeFilter === tab.value
                   ? "bg-primary text-ivory border-primary shadow-sm"
                   : "bg-ivory text-primary border-accent/35 hover:bg-accent/10"

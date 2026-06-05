@@ -45,6 +45,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Global focus outlines override */
+*:focus {
+  outline: none !important;
+}
+*:focus-visible {
+  outline: none !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair);
   color: #880e0e; /* Deep Red */
