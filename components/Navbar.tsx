@@ -49,20 +49,20 @@ export const Navbar: React.FC = () => {
             <a href="#home" className="flex items-center gap-3 group cursor-pointer">
               <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-accent shadow-sm shrink-0">
                 <Image
-                  src="/images/murliwala-logo.jpg"
+                  src="/images/murliwalasweetslogo.png"
                   alt="Murliwala Sweets Logo"
                   fill
                   className="object-cover"
                 />
               </div>
-              <div className="flex flex-col">
+              {/* <div className="flex flex-col">
                 <span className="text-xl md:text-2xl font-black tracking-wide font-playfair text-primary leading-tight">
                   MURLIWALA
                 </span>
                 <span className="text-[10px] font-bold tracking-widest font-outfit uppercase text-accent -mt-0.5">
                   Sweets & Snacks
                 </span>
-              </div>
+              </div> */}
             </a>
 
             {/* Desktop Navigation with Underline Animation */}
