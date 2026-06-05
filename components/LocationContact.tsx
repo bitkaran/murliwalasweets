@@ -143,7 +143,7 @@ export const LocationContact: React.FC = () => {
                   rel="noopener noreferrer"
                   className="sm:col-span-2 inline-flex items-center justify-center font-semibold font-outfit rounded-full px-6 py-3 text-sm md:text-base bg-whatsapp hover:bg-whatsapp/90 text-white shadow-md hover:scale-103 active:scale-98 transition-all cursor-pointer outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
                 >
-                  <FaWhatsapp className="w-4 h-4 mr-2" />
+                  <FaWhatsapp className="w-5 h-5 mr-2" />
                   Contact on WhatsApp
                 </a>
               </div>
