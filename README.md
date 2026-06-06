@@ -7,7 +7,7 @@ The website blends traditional Rajasthani aesthetic themes with a modern, high-e
 ---
 
 ## 🌐 Live Preview
-* **URL**: `Coming soon / Add Vercel URL here`
+* **URL**: `https://murliwalasweets.vercel.app`
 
 ---
 
